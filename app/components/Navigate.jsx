@@ -3,7 +3,7 @@ import React from "react";
 
 function Navigate() {
   return (
-    <div className="hidden md:flex font-bold w-[720px] lg:w-[960px] xl:w-[1140px] bg-black/[0.4] justify-between p-4 fixed top-[100px] right-[50%] translate-x-[50%] rounded items-center">
+    <div className="hidden text-white md:flex font-bold w-[720px] lg:w-[960px] xl:w-[1140px] bg-black/[0.4] justify-between p-4 fixed top-[100px] right-[50%] translate-x-[50%] rounded items-center">
       <div>
         <p>Logo & Company name</p>
       </div>
