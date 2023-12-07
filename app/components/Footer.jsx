@@ -2,6 +2,10 @@
 import React from "react";
 import facebookIcon from "../../public/svg/facebookIcon2.svg?url";
 import instagramIcon from "../../public/svg/instagramIcon.svg?url";
+import clockIcon from "../../public/svg/clock-icon.svg?url";
+import mapsIcon from "../../public/svg/maps.svg?url";
+import mailIcon from "../../public/svg/mailIcon.svg?url";
+import phoneIcon from "../../public/svg/phoneIcon.svg?url";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -12,11 +16,11 @@ function Footer() {
         <div className=" flex flex-wrap justify-center mx-auto items-start md:gap-x-7">
           <div className="w-[500px] md:w-[330px] lg:w-[220px] xl:w-[255px]">
             <h2 className="text-[30px]  my-6 font-bold">Company name</h2>
-            <p className=" max-w-[500px] md:max-w-[330px] lg:max-w-[220px] xl:max-w-[255px]">
+            <p className="mb-4 max-w-[500px] md:max-w-[330px] lg:max-w-[220px] xl:max-w-[255px]">
               Ми надаємо послуги по підключенню та доступу до швидкісної
               оптиковолоконної мережі Інтернет.
             </p>
-            <ul className="flex justify-center gap-x-2">
+            <ul className="flex justify-center gap-x-2 md:justify-start">
               <li>
                 <a
                   href="/"
@@ -76,16 +80,24 @@ function Footer() {
           </div>
           <address className="not-italic  w-[500px] md:w-[330px] lg:w-[220px] xl:w-[255px]">
             <h2 className="text-[25px] my-7 font-bold">Зв’язок з нами</h2>
-            <ul className="flex flex-col gap-y-1">
-              <li>Місцезнаходження</li>
-              <li className="flex flex-col">
-                <a href="tel:+380961111111 ">+380 96 111 11 11</a>
-                <a href="tel:+380961111111 ">+380 96 111 11 11</a>
+            <ul className="flex flex-col gap-y-3">
+              <li className="flex flex-col items-center gap-x-3 md:flex-row">
+                <Image src={mapsIcon} alt="icon" width={18} height={20} />
+                <p>Місцезнаходження</p>
               </li>
-              <li>
+              <li className="flex flex-col items-center gap-x-3 md:flex-row   ">
+                <Image src={phoneIcon} alt="icon" width={18} height={20} />
+                <div className="flex flex-col">
+                  <a href="tel:+380961111111 ">+380 96 111 11 11</a>
+                  <a href="tel:+380961111111 ">+380 96 111 11 11</a>
+                </div>
+              </li>
+              <li className="flex flex-col items-center gap-x-3 md:flex-row">
+                <Image src={mailIcon} alt="icon" width={18} height={20} />
                 <a href="mailto:mail@gmail.com">mail@gmail.com</a>
               </li>
-              <li>
+              <li className="flex flex-col items-center gap-x-3 md:flex-row">
+                <Image src={clockIcon} alt="icon" width={18} height={20} />
                 <p>Години роботи з 9:00 до 19:00</p>
               </li>
             </ul>
