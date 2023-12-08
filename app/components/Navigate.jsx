@@ -1,11 +1,16 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import logo from '../../public/logoNoBg.png'
 
 function Navigate() {
   return (
-    <div className="hidden text-white md:flex font-bold w-[720px] lg:w-[960px] xl:w-[1140px] bg-black/[0.6] justify-between p-4 fixed top-[100px] right-[50%] translate-x-[50%] rounded items-center">
+    <div className="hidden text-white md:flex font-bold w-[740px] lg:w-[960px] xl:w-[1140px] bg-black/[0.6] justify-between p-4 pl-0 fixed top-[100px] right-[50%] translate-x-[50%] rounded items-center">
       <div>
-        <p>Logo</p>
+        <Link href='/'>
+        <Image src={logo} alt="logo" width={105} height={75}/>
+        </Link>
+        
       </div>
       <nav className="flex gap-x-2  items-center text-[13px] lg:text-[16px] xl:gap-x-4">
         <Link href="/">Головна</Link>

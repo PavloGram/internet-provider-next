@@ -16,7 +16,9 @@ function Footer() {
       <footer className="bg-[#079fd1] w-full text-white py-16 px-2 text-center md:text-left ">
         <div className=" flex flex-wrap justify-center mx-auto items-start md:gap-x-7">
           <div className="w-[500px] md:w-[330px] lg:w-[220px] xl:w-[255px]">
-            <h2 className="text-[30px]  my-6 font-bold">Company name</h2>
+            <Link href='/'>
+            </Link>
+            <h2 className="text-[30px]  my-6 font-black uppercase ">Widewave</h2>
             <p className="mb-4 max-w-[500px] md:max-w-[330px] lg:max-w-[220px] xl:max-w-[255px]">
               Ми надаємо послуги по підключенню та доступу до швидкісної
               оптиковолоконної мережі Інтернет.

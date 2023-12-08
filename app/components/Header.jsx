@@ -9,6 +9,8 @@ import TikTokIcon from "../../public/svg/tikTokIcon.svg";
 import phoneIcon from "../../public/svg/phoneIcon.svg?url";
 import mailIcon from "../../public/svg/mailIcon.svg?url";
 import Navigate from "./Navigate";
+import logo from '../../public/logoNoBg.png'
+import Link from "next/link";
 
 function Header() {
   const [actMobMeny, setActMobMenu] = useState(false);
@@ -44,7 +46,12 @@ function Header() {
         </div>
       </div>
       <div className="md:hidden">
-        <p className="text-[28px] text-center">Logo & Company name</p>
+        <Link href='/'>
+<Image src={logo} alt="logo" width={210} height={150} className="mx-auto my-5"/>
+
+        </Link>
+        
+        {/* <p className="text-[28px] text-center">Logo & Company name</p> */}
         <div className="p-[10px] bg-[#079fd1] flex justify-between items-center ">
           <span className="uppercase font-bold text-white">menu</span>{" "}
           <button type="button" onClick={() => setActMobMenu(!actMobMeny)}>
