@@ -5,6 +5,7 @@ import closeIcon from "../../public/svg/closeIcon.svg?url";
 import Image from "next/image";
 import FacebookIcon from "../../public/svg/facebookIcon2.svg";
 import InstagramIcon from "../../public/svg/instagramIcon.svg";
+import TikTokIcon from "../../public/svg/tikTokIcon.svg";
 import phoneIcon from "../../public/svg/phoneIcon.svg?url";
 import mailIcon from "../../public/svg/mailIcon.svg?url";
 import Navigate from "./Navigate";
@@ -30,12 +31,15 @@ function Header() {
           </a>
         </div>
         <div className="flex items-center gap-4">
-          <a href="http://metannet.speedtestcustom.com/">Перевірка швидкості</a>
-          <a href="/">
+          <a href="http://metannet.speedtestcustom.com/" className="hover:text-black transition-colors duration-300">Перевірка швидкості</a>
+          <a href="/" >
             <FacebookIcon />
           </a>
-          <a href="/">
+          <a href="/" >
             <InstagramIcon />
+          </a>
+          <a href="/" >
+            <TikTokIcon  />
           </a>
         </div>
       </div>

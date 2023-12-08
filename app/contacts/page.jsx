@@ -1,8 +1,16 @@
 import React from 'react'
+import Hero from '../ui/hero'
 
 function Contacts() {
   return (
-    <div className='flex items-center justify-center w-full h-[600px]'><p className='text-[40px]'>Наші контакти</p></div>
+    <main>
+    <section>
+      <Hero/>
+      </section>
+      <section>
+        
+      </section>
+      </main>
   )
 }
 

@@ -2,6 +2,7 @@
 import React from "react";
 import facebookIcon from "../../public/svg/facebookIcon2.svg?url";
 import instagramIcon from "../../public/svg/instagramIcon.svg?url";
+import tikTokIcon from "../../public/svg/tikTokIcon.svg?url";
 import clockIcon from "../../public/svg/clock-icon.svg?url";
 import mapsIcon from "../../public/svg/maps.svg?url";
 import mailIcon from "../../public/svg/mailIcon.svg?url";
@@ -24,7 +25,7 @@ function Footer() {
               <li>
                 <a
                   href="/"
-                  className="w-10 h-10 flex justify-center items-center rounded bg-[#157696]"
+                  className="w-10 h-10 flex justify-center items-center rounded bg-[#157696] hover:bg-[#079fd1] transition-colors duration-300"
                 >
                   <Image src={facebookIcon} alt="icon" width={16} height={17} />
                 </a>
@@ -32,10 +33,23 @@ function Footer() {
               <li>
                 <a
                   href="/"
-                  className="w-10 h-10 flex justify-center items-center rounded bg-[#157696]"
+                  className="w-10 h-10 flex justify-center items-center rounded bg-[#157696] hover:bg-[#079fd1] transition-colors duration-300"
                 >
                   <Image
                     src={instagramIcon}
+                    alt="icon"
+                    width={16}
+                    height={17}
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/"
+                  className="w-10 h-10 flex justify-center items-center rounded bg-[#157696] hover:bg-[#079fd1] transition-colors duration-300"
+                >
+                  <Image
+                    src={tikTokIcon}
                     alt="icon"
                     width={16}
                     height={17}
@@ -106,20 +120,27 @@ function Footer() {
             <h2 className="text-[25px] my-7 font-bold">Навігація</h2>
             <ul className="flex flex-col gap-y-2">
               <li>
-                <Link href="/about">Про нас</Link>
+                <Link href="/">Головна</Link>
               </li>
               <li>
-                <Link href="/">Тарифи</Link>
+                <Link href="/internet">Інтернет</Link>
+              </li>
+              <li>
+                <Link href="/film&tv">Фільми та телебачення</Link>
+              </li>
+              <li>
+                <Link href="/web">Відеоспостереження</Link>
               </li>
               <li>
                 <Link href="/action">Акції</Link>
               </li>
               <li>
-                <Link href="/">Новини</Link>
-              </li>
-              <li>
                 <Link href="/contacts">Контакти</Link>
               </li>
+              <li>
+                <Link href="/about">Про нас</Link>
+              </li>
+              <li><Link href='/pay'>Оплата</Link></li>
             </ul>
           </div>
         </div>
