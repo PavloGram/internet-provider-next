@@ -1,8 +1,15 @@
 import React from 'react'
+import Hero from '../ui/hero'
+import Card from '../ui/card'
+import Contact from '../ui/contact'
 
 function FilmAndTv() {
   return (
-    <div>FilmAndTv</div>
+    <main>
+    <Hero/>
+    <Card/>
+    <Contact/>
+   </main>
   )
 }
 

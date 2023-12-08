@@ -1,8 +1,15 @@
 import React from 'react'
+import Hero from '../ui/hero'
+import Contact from '../ui/contact'
+import Card from '../ui/card'
 
 function Internet() {
   return (
-    <div className='flex items-center justify-center w-full h-[600px]'><p className='text-[40px]'>Підключення до інтернету</p></div>
+   <main>
+    <Hero/>
+    <Card/>
+    <Contact/>
+   </main>
   )
 }
 
