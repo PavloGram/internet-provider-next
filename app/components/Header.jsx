@@ -119,13 +119,13 @@ function Header() {
                 </Link>
                 <div className="flex gap-x-3 mt-5">
                 
-          <a className="w-6 h-6 rounded-full bg-[#079fd1] flex justify-center items-center"  href="/">
+          <a className="w-8 h-8 rounded-full bg-[#079fd1] flex justify-center items-center"  href="/">
             <FacebookIcon />
           </a>
-          <a className="w-6 h-6 rounded-full bg-[#079fd1] flex justify-center items-center" href="/">
+          <a className="w-8 h-8 rounded-full bg-[#079fd1] flex justify-center items-center" href="/">
             <InstagramIcon />
           </a>
-          <a className="w-6 h-6 rounded-full bg-[#079fd1] flex justify-center items-center" href="/">
+          <a className="w-8 h-8 rounded-full bg-[#079fd1] flex justify-center items-center" href="/">
             <TikTokIcon />
           </a>
                 </div>
