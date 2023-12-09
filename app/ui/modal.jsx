@@ -13,17 +13,17 @@ function Modal() {
    <>
    {modal.isOpen && (
         <div
-          className="fixed top-0 left-0 w-full h-full bg-black/[0.5] flex justify-center  items-center overflow-y-auto"
+          className="fixed top-0 left-0 w-full h-full bg-black/[0.5] flex justify-center pointer-events-auto  items-center overflow-y-auto"
           onClick={() => modal.close()}
         >
           <div
             className="relative mt-2  py-10 px-9 bg-white pointer-events-auto min-w-[260px]  max-w-[450px] rounded-md overflow-hidden"
-            onClick={() => modal.close()}
+            onClick={(e) => e.stopPropagation()}
           >
             <button
               type="button"
               className="absolute top-0 right-0 w-9 h-9 bg-[#079fd1]"
-            //   onClick={() => setIsActiveModal(false)}
+              onClick={() => modal.close()}
             >
               <Image src={closeIcon} alt='icon' />
             </button>
