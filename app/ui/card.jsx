@@ -8,7 +8,7 @@ function Card() {
     <section className="max-w-[1140px] mb-40 pt-5 flex flex-wrap gap-5 mx-auto ">
         
       <div className="w-[353px] mx-auto  shadow-[0_0_30px_0_rgba(0,0,0,0.08)] rounded-2xl my-10 border-t-4 border-[#fe974e]">
-        <div className=" border-b border-black relative py-[60px]">
+        <div className="relative border-b border-black  py-[60px]">
           <Image
             src={routerIcon}
             alt="icon"

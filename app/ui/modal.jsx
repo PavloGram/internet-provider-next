@@ -2,19 +2,23 @@
 import React from 'react'
 import closeIcon from "../../public/svg/closeIcon.svg?url"
 import Image from 'next/image'
+import { useModal } from '@/store'
+
 
 function Modal() {
-    const isActiveModal = true
+  const modal = useModal()
+
+   
   return (
    <>
-   {isActiveModal && (
+   {modal.isOpen && (
         <div
           className="fixed top-0 left-0 w-full h-full bg-black/[0.5] flex justify-center  items-center overflow-y-auto"
-        //   onClick={() => setIsActiveModal(false)}
+          onClick={() => modal.close()}
         >
           <div
             className="relative mt-2  py-10 px-9 bg-white pointer-events-auto min-w-[260px]  max-w-[450px] rounded-md overflow-hidden"
-            onClick={(e) => e.stopPropagation()}
+            onClick={() => modal.close()}
           >
             <button
               type="button"

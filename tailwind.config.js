@@ -9,7 +9,8 @@ module.exports = {
     extend: {
       backgroundImage: {
       'hero-bg': "url('../public/single-imge.jpg')",
-      'contact-bg': "url('../public/call-to-bg.jpg')"
+      'contact-bg': "url('../public/call-to-bg.jpg')",
+      'tech-bg': "url('../public/sport-bg.jpg')"
       },
     },
   },
