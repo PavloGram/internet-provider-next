@@ -16,7 +16,7 @@ function Header() {
   const [actMobMeny, setActMobMenu] = useState(false);
   return (
     <header className="mx-auto">
-      <div className="hidden sm:flex  text-white bg-[#079fd1] text-xs px-10 py-3 flex-wrap gap-x-[100px] justify-center md:text-base xl:gap-x-[400px]">
+      <div className="hidden sm:flex z-40  text-white bg-[#079fd1] text-xs px-10 py-3 flex-wrap gap-x-[100px] justify-center md:text-base xl:gap-x-[400px]">
         <div className="flex gap-x-[20px]">
           <a href="tel:+380961111111" className="flex items-center gap-1">
             <Image src={phoneIcon} alt="icon" width={12} height={12} />
