@@ -24,7 +24,7 @@ export default function Home() {
           className={`flex w-[200vw] top-0 left-0 ${position} gap-[1px] transition duration-[2000ms] `}
         >
           <div>
-            <div className="  w-[100vw] h-[600px] md:h-[730px] lg:h-[920px] bg-blue-400 flex flex-col justify-center md:flex-row items-center">
+            <div className="  w-[100vw] h-[600px] md:h-[730px] lg:h-[920px] bg-blue-hero-bg bg-cover flex flex-col justify-center md:flex-row items-center">
             <div className="max-w-[1140px] p-5 flex flex-col gap-y-10 text-center md:text-left">
                 <h1 className="text-[31px] md:text-[40px] lg:text-[40px]">Інтернет у кожен дім</h1>
                 <p className="md:text-[22px]">
@@ -39,7 +39,7 @@ export default function Home() {
             </div>
           </div>
           <div>
-            <div className="  w-[100vw] h-[600px] md:h-[730px] lg:h-[920px] bg-yellow-500 flex flex-col justify-center md:flex-row items-center">
+            <div className="  w-[100vw] h-[600px] md:h-[730px] lg:h-[920px] bg-yellow-hero-bg bg-cover flex flex-col justify-center md:flex-row items-center">
               <div className="max-w-[1140px] p-5 flex flex-col gap-y-10 text-center md:text-left">
                 <h1 className="text-[31px] md:text-[40px] lg:text-[40px]">
                   Підключайтесь і отримайте бонуси
