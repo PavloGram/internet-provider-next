@@ -1,9 +1,20 @@
+'use client'
 import React from "react";
 import Hero from "../ui/hero";
 import Image from "next/image";
 import conatctsThumb from "../../public/tabThumb.png";
 
 function Contacts() {
+  // function handleSubmit(e){
+  //   e.preventDefault()
+  //   const data = {
+  //     name: name,
+  //     // phone, 
+  //     email,
+  //     message
+  //   }
+  //   console.log(data);
+  // }
   return (
     <main>
       <section>
@@ -14,11 +25,11 @@ function Contacts() {
           <h1 className="text-[#157696] font-bold text-[22px] mb-10 md:text-[28px] lg:text-[38px]">
             Зворотній зв&#39;язок
           </h1>
-          <form className="flex flex-col items-start gap-y-7">
-            <input type="text" placeholder="Im’я*" required className="w-full placeholder:text-[#616161] placeholder:text-[18px] py-2 pl-[30px] pr-3 border-b border-[#f1f1f] outline-none" />
-            <input type="email" placeholder="Email*" required  className="w-full placeholder:text-[#616161] placeholder:text-[18px] py-2 pl-[30px] pr-3 border-b border-[#f1f1f] outline-none"/>
-            <input type="tel" placeholder="Номер телефону*" required className="w-full placeholder:text-[#616161] placeholder:text-[18px] py-2 pl-[30px] pr-3 border-b border-[#f1f1f] outline-none"/>
-            <textarea  placeholder="Повідомлення*"   rows={6} required className="w-full placeholder:text-[#616161] placeholder:text-[18px] py-2 pl-[30px] pr-3 border-b border-[#f1f1f] outline-none"/>
+          <form  className="flex flex-col items-start gap-y-7">
+            <input name="name" type="text" placeholder="Im’я*" required className="w-full placeholder:text-[#616161] placeholder:text-[18px] py-2 pl-[30px] pr-3 border-b border-[#f1f1f] outline-none" />
+            <input name="email"  type="email" placeholder="Email*" required  className="w-full placeholder:text-[#616161] placeholder:text-[18px] py-2 pl-[30px] pr-3 border-b border-[#f1f1f] outline-none"/>
+            <input name="phone" type="tel" placeholder="Номер телефону*" required className="w-full placeholder:text-[#616161] placeholder:text-[18px] py-2 pl-[30px] pr-3 border-b border-[#f1f1f] outline-none"/>
+            <textarea name="message"  placeholder="Повідомлення*"   rows={6} required className="w-full placeholder:text-[#616161] placeholder:text-[18px] py-2 pl-[30px] pr-3 border-b border-[#f1f1f] outline-none"/>
             <button
               type="submit"
               className="text-[17px] px-[30px] py-[15px] bg-[#079fd1] rounded text-white font-bold leading-normal hover:bg-black transition-colors duration-300"
