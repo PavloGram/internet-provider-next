@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const HeaderMenu = styled.div`
-  display: block;
+  display: none;
   z-index: 40;
   font-weight: 700;
   width: 740px;

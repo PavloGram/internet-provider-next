@@ -72,7 +72,7 @@ function Header() {
               height={35}
             />
           </button>
-          <div className="absolute bottom-[-100%] right-0  w-full h-full bg-white pointer-events-none ">
+          <div className="absolute bottom-[-100%] right-0  w-full h-full  pointer-events-none ">
             {actMobMeny && (
               <nav
                 className={`shadow-[0_0_30px_0_rgba(0,0,0,0.08)] rounded-b-xl absolute top-0 left-0 flex flex-col items-center py-5 bg-white gap-2 w-full transition duration-300 ${
