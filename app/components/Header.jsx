@@ -11,6 +11,7 @@ import mailIcon from "../../public/svg/mailIcon.svg?url";
 import Navigate from "./Navigate";
 import logo from "../../public/logoNoBg.png";
 import Link from "next/link";
+import styles from '../components/navigate.module.css';
 
 function Header() {
   const [actMobMeny, setActMobMenu] = useState(false);
@@ -75,7 +76,7 @@ function Header() {
           <div className="absolute bottom-[-100%] right-0  w-full h-full  pointer-events-none ">
             {actMobMeny && (
               <nav
-                className={`shadow-[0_0_30px_0_rgba(0,0,0,0.08)] rounded-b-xl absolute top-0 left-0 flex flex-col items-center py-5 bg-white gap-2 w-full transition duration-300 ${
+                className={`${styles.trans} shadow-[0_0_30px_0_rgba(0,0,0,0.08)] rounded-b-xl absolute top-0 left-0 flex flex-col items-center py-5 bg-white gap-2 w-full transition duration-300 ${
                   actMobMeny ? "translate-y-0 " : "translate-y-[-100%] "
                 } pointer-events-auto`}
               >
