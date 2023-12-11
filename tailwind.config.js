@@ -14,6 +14,7 @@ module.exports = {
       'yellow-hero-bg': "url('../public/yellow-hero-bg.png')",
       'blue-hero-bg': "url('../public/blue-hero-bg.png')"
       },
+      
     },
   },
   plugins: [],

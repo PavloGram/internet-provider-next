@@ -16,9 +16,10 @@ function Footer() {
       <footer className="bg-[#079fd1] w-full text-white py-16 px-2 text-center md:text-left ">
         <div className=" flex flex-wrap justify-center mx-auto items-start md:gap-x-7">
           <div className="w-[500px] md:w-[330px] lg:w-[220px] xl:w-[255px]">
-            <Link href='/'>
-            </Link>
-            <h2 className="text-[30px]  my-6 font-black uppercase ">Widewave</h2>
+            <Link href="/"></Link>
+            <h2 className="text-[30px]  my-6 font-black uppercase ">
+              Widewave
+            </h2>
             <p className="mb-4 max-w-[500px] md:max-w-[330px] lg:max-w-[220px] xl:max-w-[255px]">
               Ми надаємо послуги по підключенню та доступу до швидкісної
               оптиковолоконної мережі Інтернет.
@@ -50,12 +51,7 @@ function Footer() {
                   href="/"
                   className="w-10 h-10 flex justify-center items-center rounded bg-[#157696] hover:bg-[#079fd1] transition-colors duration-300"
                 >
-                  <Image
-                    src={tikTokIcon}
-                    alt="icon"
-                    width={16}
-                    height={17}
-                  />
+                  <Image src={tikTokIcon} alt="icon" width={16} height={17} />
                 </a>
               </li>
             </ul>
@@ -71,21 +67,11 @@ function Footer() {
               <li>
                 <a href="/pay">Оплата</a>
               </li>
-              <li>
-                <a href="/">Мапа покриття</a>
-              </li>
+
               <li>
                 <a href="/">Якість інтернету</a>
               </li>
-              <li>
-                <a href="/">Ліцензія 1</a>
-              </li>
-              <li>
-                <a href="/">Ліцензія 2</a>
-              </li>
-              <li>
-                <a href="/">Оператор</a>
-              </li>
+
               <li>
                 <a href="/">Публічний договір (оферта)</a>
               </li>
@@ -104,13 +90,13 @@ function Footer() {
               <li className="flex flex-col items-center gap-x-3 md:flex-row   ">
                 <Image src={phoneIcon} alt="icon" width={18} height={20} />
                 <div className="flex flex-col">
-                  <a href="tel:+380961111111 ">+380 96 111 11 11</a>
-                  <a href="tel:+380961111111 ">+380 96 111 11 11</a>
+                  <a href="tel:+16892125127">+1(689) 212 51 27</a>
+                  <a href="tel:+13054627507">+1(305) 462 75 07</a>
                 </div>
               </li>
               <li className="flex flex-col items-center gap-x-3 md:flex-row">
                 <Image src={mailIcon} alt="icon" width={18} height={20} />
-                <a href="mailto:mail@gmail.com">mail@gmail.com</a>
+                <a href="mailto:Widewaveit@gmail.com">Widewaveit@gmail.com</a>
               </li>
               <li className="flex flex-col items-center gap-x-3 md:flex-row">
                 <Image src={clockIcon} alt="icon" width={18} height={20} />
@@ -131,7 +117,7 @@ function Footer() {
                 <Link href="/film&tv">Фільми та телебачення</Link>
               </li>
               <li>
-                <Link href="/web">Відеоспостереження</Link>
+                <Link href="/web">Камери відеоспостереження</Link>
               </li>
               <li>
                 <Link href="/action">Акції</Link>
@@ -142,7 +128,12 @@ function Footer() {
               <li>
                 <Link href="/about">Про нас</Link>
               </li>
-              <li><Link href='/pay'>Оплата</Link></li>
+              <li>
+                <Link href="/pay">Оплата</Link>
+              </li>
+              <li>
+                <Link href="/vacancies">Вакансії</Link>
+              </li>
             </ul>
           </div>
         </div>

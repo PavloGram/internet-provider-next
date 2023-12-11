@@ -18,18 +18,18 @@ function Header() {
     <header className="mx-auto">
       <div className="hidden sm:flex z-40  text-white bg-[#079fd1] text-xs px-10 py-3 flex-wrap gap-x-[100px] justify-center md:text-base xl:gap-x-[400px]">
         <div className="flex gap-x-[20px]">
-          <a href="tel:+380961111111" className="flex items-center gap-1">
+          <a href="tel:+16892125127" className="flex items-center gap-1">
             <Image src={phoneIcon} alt="icon" width={12} height={12} />
-            +380 96 111 11 11
+            +1(689) 212 51 27
           </a>
-          <a href="tel:+380961111111" className="flex items-center gap-1">
+          <a href="tel:+13054627507" className="flex items-center gap-1">
             <Image src={phoneIcon} alt="icon" width={12} height={12} />
-            +380 96 111 11 11
+            +1(305) 462 75 07
           </a>
 
-          <a href="mailto:mail@gmail.com" className="flex items-center gap-1">
+          <a href="mailto:Widewaveit@gmail.com" className="flex items-center gap-1">
             <Image src={mailIcon} alt="icon" width={14} height={14} />
-            mail@gmail.com
+            Widewaveit@gmail.com
           </a>
         </div>
         <div className="flex items-center gap-4">
@@ -96,7 +96,7 @@ function Header() {
                 </Link>
 
                 <Link href="/web" onClick={() => setActMobMenu(!actMobMeny)}>
-                  Спостереження
+                  Камери відеоспостереження
                 </Link>
                 <Link href="/action" onClick={() => setActMobMenu(!actMobMeny)}>
                   Акції
@@ -116,6 +116,13 @@ function Header() {
                   onClick={() => setActMobMenu(!actMobMeny)}
                 >
                   Оплата
+                </Link>
+                <Link
+                  href="/vacancies"
+                  //  className="px-6 py-3 bg-[#079fd7] rounded"
+                  onClick={() => setActMobMenu(!actMobMeny)}
+                >
+                  Вакансії
                 </Link>
                 <div className="flex gap-x-3 mt-5">
                 
