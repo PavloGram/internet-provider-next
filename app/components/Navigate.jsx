@@ -3,8 +3,7 @@ import Link from "next/link";
 import React from "react";
 import logo from "../../public/logoNoBg.png";
 import chevronUpIcon from "../../public/svg/chevronUp.svg?url";
-import styles from '../components/navigate.module.css';
-
+import styles from "../components/navigate.module.css";
 
 function Navigate() {
   const [scroll, setScroll] = React.useState(0);
@@ -23,9 +22,10 @@ function Navigate() {
   }, []);
   return (
     <>
-   
       <div
-        className={`${styles.trans} hidden z-40 md:flex font-bold w-[740px] lg:w-[960px] xl:w-[1140px]  justify-between p-4 pl-0 fixed ${
+        className={`${
+          styles.trans
+        } hidden z-40 md:flex font-bold w-[740px] lg:w-[960px] xl:w-[1140px]  justify-between p-4 pl-0 fixed ${
           scroll > 200
             ? "top-0 bg-black/[0.6] text-white"
             : "top-[100px] bg-white text-black"
@@ -43,40 +43,26 @@ function Navigate() {
           >
             Головна
           </Link>
-          {/* <div className="relative overflow-hidden hover:overflow-visible">
-            <p className="hover:text-[#079fd1] transition-colors duration-300 cursor-pointer">Послуги</p>
-            <div
-              className={` absolute flex flex-col p-3 rounded gap-y-2 ${
-                scroll > 200
-                  ? " bg-black/[0.6] text-white"
-                  : " bg-white text-black"
-              }`}
-            >
-              <Link
-                href="/internet"
-                className="hover:text-[#079fd1] transition-colors duration-300"
-              >
-                Інтернет
-              </Link>
-              <Link
-                href="/film&tv"
-                className="hover:text-[#079fd1] transition-colors duration-300"
-              >
-                Фільми та телебачення
-              </Link>
 
-              <Link
-                href="/web"
-                className="hover:text-[#079fd1] transition-colors duration-300"
-              >
-                Камери відеоспостереження
-              </Link>
-            </div>
-          </div> */}
-          <Link href="/internet"className="hover:text-[#079fd1] transition-colors duration-300" >Інтернет</Link>
-        <Link href="/film&tv"className="hover:text-[#079fd1] transition-colors duration-300" >Фільми та телебачення</Link>
+          <Link
+            href="/internet"
+            className="hover:text-[#079fd1] transition-colors duration-300"
+          >
+            Інтернет
+          </Link>
+          <Link
+            href="/film&tv"
+            className="hover:text-[#079fd1] transition-colors duration-300"
+          >
+            Фільми та телебачення
+          </Link>
 
-        <Link href="/web"className="hover:text-[#079fd1] transition-colors duration-300" >Спостереження</Link>
+          <Link
+            href="/web"
+            className="hover:text-[#079fd1] transition-colors duration-300"
+          >
+            Спостереження
+          </Link>
           <Link
             href="/action"
             className="hover:text-[#079fd1] transition-colors duration-300"
@@ -102,13 +88,7 @@ function Navigate() {
           >
             Оплата
           </Link>
-          {/* <Link
-            href="/vacancies"
-            className="hover:text-[#079fd1] transition-colors duration-300"
-          >
-            Вакансії
-          </Link> */}
-        </nav>  
+        </nav>
       </div>
       {scroll > 200 && (
         <button

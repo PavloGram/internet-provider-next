@@ -12,7 +12,8 @@ module.exports = {
       'contact-bg': "url('../public/call-to-bg.jpg')",
       'tech-bg': "url('../public/sport-bg.jpg')",
       'yellow-hero-bg': "url('../public/yellow-hero-bg.png')",
-      'blue-hero-bg': "url('../public/blue-hero-bg.png')"
+      'blue-hero-bg': "url('../public/blue-hero-bg.png')",
+      'bank-bg': "url('../public/bOA.png')"
       },
       
     },
