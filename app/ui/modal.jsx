@@ -17,7 +17,7 @@ function Modal() {
           onClick={() => modal.close()}
         >
           <div
-            className="relative mt-2  py-10 px-9 bg-white pointer-events-auto min-w-[260px]  max-w-[450px] rounded-md overflow-hidden"
+            className="z-100 relative mt-2  py-10 px-9 bg-white pointer-events-auto min-w-[260px]  max-w-[450px] rounded-md overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
             <button

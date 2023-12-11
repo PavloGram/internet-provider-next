@@ -43,6 +43,9 @@ export default function Home() {
   }
 
 
+
+
+
   return (
     <main>
       <div className="  w-[100vw] h-[600px] md:h-[730px] lg:h-[920px] bg-blue-hero-bg bg-cover bg-center flex flex-col justify-center md:flex-row items-center">
