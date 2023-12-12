@@ -1,4 +1,4 @@
-import logoImg from "../../public/logoNoBg.png";
+import logoImg from "../../public/logoNoBgZip.png";
 export const heroData = [
   {
     id: 1,
@@ -14,6 +14,7 @@ export const heroData = [
       " " +
       "населених пунктів.",
     iconUrl: logoImg,
+    bg: 'bg-blue-hero-bg'
   },
   {
     id: 2,
@@ -27,6 +28,7 @@ export const heroData = [
       " " +
       "Інтернет MetanNet",
     iconUrl: logoImg,
+    bg: 'bg-yellow-hero-bg'
   },
   {
     id: 1,
@@ -42,6 +44,7 @@ export const heroData = [
       " " +
       "населених пунктів.",
     iconUrl: logoImg,
+    bg: 'bg-blue-hero-bg'
   },
   {
     id: 2,
@@ -55,5 +58,6 @@ export const heroData = [
       " " +
       "Інтернет MetanNet",
     iconUrl: logoImg,
+    bg: 'bg-yellow-hero-bg'
   },
 ];

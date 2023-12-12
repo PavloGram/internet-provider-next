@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import bankIcon from "../../public/bOA.png";
-import Hero from "../ui/hero";
+import Hero from "../components/Hero";
 import styles from '../pay/pay.module.css'
 
 function Pay() {

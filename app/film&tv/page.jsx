@@ -1,5 +1,5 @@
 import React from 'react'
-import Hero from '../ui/hero'
+import Hero from '../components/Hero'
 import Card from '../ui/card'
 import Contact from '../ui/contact'
 import Modal from '../ui/modal'

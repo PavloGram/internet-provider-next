@@ -1,14 +1,13 @@
 "use client";
 import React from "react";
-import facebookIcon from "../../public/svg/facebookIcon2.svg?url";
-import instagramIcon from "../../public/svg/instagramIcon.svg?url";
-import tikTokIcon from "../../public/svg/tikTokIcon.svg?url";
-import clockIcon from "../../public/svg/clock-icon.svg?url";
-import mapsIcon from "../../public/svg/maps.svg?url";
-import mailIcon from "../../public/svg/mailIcon.svg?url";
-import phoneIcon from "../../public/svg/phoneIcon.svg?url";
-import Image from "next/image";
 import Link from "next/link";
+import ClockIcon from "../ui/ClockIcon";
+import MailSvg from "../ui/MailIcon";
+import PhoneSvg from "../ui/PhoneIcon";
+import MapsIcon from "../ui/MapsIcon";
+import InstagramIcon from "../ui/InstagramIcon";
+import TikTokIcon from "../ui/TikTokIcon";
+import FacebookIcon from "../ui/FacebookIcon";
 
 function Footer() {
   return (
@@ -30,7 +29,8 @@ function Footer() {
                   href="/"
                   className="w-10 h-10 flex justify-center items-center rounded bg-[#157696] hover:bg-[#079fd1] transition-colors duration-300"
                 >
-                  <Image src={facebookIcon} alt="icon" width={16} height={17} />
+                  <FacebookIcon width={16} height={17}/>
+            
                 </a>
               </li>
               <li>
@@ -38,12 +38,7 @@ function Footer() {
                   href="/"
                   className="w-10 h-10 flex justify-center items-center rounded bg-[#157696] hover:bg-[#079fd1] transition-colors duration-300"
                 >
-                  <Image
-                    src={instagramIcon}
-                    alt="icon"
-                    width={16}
-                    height={17}
-                  />
+                  <InstagramIcon width={16} height={17} />
                 </a>
               </li>
               <li>
@@ -51,7 +46,7 @@ function Footer() {
                   href="/"
                   className="w-10 h-10 flex justify-center items-center rounded bg-[#157696] hover:bg-[#079fd1] transition-colors duration-300"
                 >
-                  <Image src={tikTokIcon} alt="icon" width={16} height={17} />
+                  <TikTokIcon width={16} height={17} />
                 </a>
               </li>
             </ul>
@@ -84,22 +79,24 @@ function Footer() {
             <h2 className="text-[25px] my-7 font-bold">Зв’язок з нами</h2>
             <ul className="flex flex-col gap-y-3">
               <li className="flex flex-col items-center gap-x-3 md:flex-row">
-                <Image src={mapsIcon} alt="icon" width={18} height={20} />
+                <MapsIcon width={20} height={20} />
                 <p>Місцезнаходження</p>
               </li>
               <li className="flex flex-col items-center gap-x-3 md:flex-row   ">
-                <Image src={phoneIcon} alt="icon" width={18} height={20} />
+                <PhoneSvg width={18} height={20} />
+
                 <div className="flex flex-col">
                   <a href="tel:+16892125127">+1(689) 212 51 27</a>
                   <a href="tel:+13054627507">+1(305) 462 75 07</a>
                 </div>
               </li>
               <li className="flex flex-col items-center gap-x-3 md:flex-row">
-                <Image src={mailIcon} alt="icon" width={18} height={20} />
+                <MailSvg width={18} height={20} />
+
                 <a href="mailto:Widewaveit@gmail.com">Widewaveit@gmail.com</a>
               </li>
               <li className="flex flex-col items-center gap-x-3 md:flex-row">
-                <Image src={clockIcon} alt="icon" width={18} height={20} />
+                <ClockIcon width={20} height={20} />
                 <p>Години роботи з 9:00 до 19:00</p>
               </li>
             </ul>

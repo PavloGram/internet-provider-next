@@ -1,5 +1,5 @@
 import React from "react";
-import Hero from "../ui/hero";
+import Hero from "../components/Hero";
 import Image from "next/image";
 import promoImg from "../../public/promotional-offer.jpg";
 

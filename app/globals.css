@@ -29,3 +29,21 @@ ul {
 ul {
   list-style: none;
 }
+.icon{
+  fill: white;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.headerLink:hover > .icon{
+  fill:black
+}
+
+
+.trans{
+  z-index: 100;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}

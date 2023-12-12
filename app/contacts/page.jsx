@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import Hero from "../ui/hero";
+import Hero from "../components/Hero";
 import Image from "next/image";
 import conatctsThumb from "../../public/tabThumb.png";
 

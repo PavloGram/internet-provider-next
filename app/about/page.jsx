@@ -1,6 +1,6 @@
 import React from "react";
-import Hero from "../ui/hero";
-import logo from '../../public/logoNoBg.png'
+import Hero from "../components/Hero";
+import logo from '../../public/logoNoBgZip.png'
 import Image from "next/image";
 
 function AboutAs() {

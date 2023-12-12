@@ -3,15 +3,15 @@ import React, { useState } from "react";
 import menuIcon from "../../public/svg/menuIcon.svg?url";
 import closeIcon from "../../public/svg/closeIcon.svg?url";
 import Image from "next/image";
-import FacebookIcon from "../../public/svg/facebookIcon2.svg";
-import InstagramIcon from "../../public/svg/instagramIcon.svg";
-import TikTokIcon from "../../public/svg/tikTokIcon.svg";
-import phoneIcon from "../../public/svg/phoneIcon.svg?url";
-import mailIcon from "../../public/svg/mailIcon.svg?url";
 import Navigate from "./Navigate";
-import logo from "../../public/logoNoBg.png";
+import logo from "../../public/logoNoBgZip.png";
 import Link from "next/link";
-import styles from '../components/navigate.module.css';
+import PhoneSvg from "../ui/PhoneIcon";
+import MailSvg from "../ui/MailIcon";
+
+import InstagramIcon from "../ui/InstagramIcon";
+import TikTokIcon from "../ui/TikTokIcon";
+import FacebookIcon from "../ui/FacebookIcon";
 
 function Header() {
   const [actMobMeny, setActMobMenu] = useState(false);
@@ -19,17 +19,26 @@ function Header() {
     <header className="mx-auto">
       <div className="hidden sm:flex z-40  text-white bg-[#079fd1] text-xs px-10 py-3 flex-wrap gap-x-[100px] justify-center md:text-base xl:gap-x-[400px]">
         <div className="flex gap-x-[20px]">
-          <a href="tel:+16892125127" className="flex items-center gap-1">
-            <Image src={phoneIcon} alt="icon" width={12} height={12} />
+          <a
+            href="tel:+16892125127"
+            className="headerLink flex items-center gap-1  transition hover:text-black"
+          >
+            <PhoneSvg width={12} height={12} />
             +1(689) 212 51 27
           </a>
-          <a href="tel:+13054627507" className="flex items-center gap-1">
-            <Image src={phoneIcon} alt="icon" width={12} height={12} />
+          <a
+            href="tel:+13054627507"
+            className="headerLink flex items-center gap-1 transition hover:text-black"
+          >
+            <PhoneSvg width={12} height={12} />
             +1(305) 462 75 07
           </a>
 
-          <a href="mailto:Widewaveit@gmail.com" className="flex items-center gap-1">
-            <Image src={mailIcon} alt="icon" width={14} height={14} />
+          <a
+            href="mailto:Widewaveit@gmail.com"
+            className="headerLink flex items-center gap-1 transition hover:text-black"
+          >
+            <MailSvg width={14} height={14} />
             Widewaveit@gmail.com
           </a>
         </div>
@@ -40,14 +49,14 @@ function Header() {
           >
             Перевірка швидкості
           </a>
-          <a href="/">
-            <FacebookIcon />
+          <a href="/" className="headerLink">
+            <FacebookIcon width={15} height={16} />
           </a>
-          <a href="/">
-            <InstagramIcon />
+          <a href="/" className="headerLink">
+            <InstagramIcon width={15} height={16} />
           </a>
-          <a href="/">
-            <TikTokIcon />
+          <a href="/" className="headerLink">
+            <TikTokIcon width={15} height={16} />
           </a>
         </div>
       </div>
@@ -76,7 +85,7 @@ function Header() {
           <div className="absolute bottom-[-100%] right-0  w-full h-full  pointer-events-none ">
             {actMobMeny && (
               <nav
-                className={`${styles.trans} shadow-[0_0_30px_0_rgba(0,0,0,0.08)] rounded-b-xl absolute top-0 left-0 flex flex-col items-center py-5 bg-white gap-2 w-full transition duration-300 ${
+                className={`trans shadow-[0_0_30px_0_rgba(0,0,0,0.08)] rounded-b-xl absolute top-0 left-0 flex flex-col items-center py-5 bg-white gap-2 w-full transition duration-300 ${
                   actMobMeny ? "translate-y-0 " : "translate-y-[-100%] "
                 } pointer-events-auto`}
               >
@@ -126,16 +135,24 @@ function Header() {
                   Вакансії
                 </Link>
                 <div className="flex gap-x-3 mt-5">
-                
-          <a className="w-8 h-8 rounded-full bg-[#079fd1] flex justify-center items-center"  href="/">
-            <FacebookIcon />
-          </a>
-          <a className="w-8 h-8 rounded-full bg-[#079fd1] flex justify-center items-center" href="/">
-            <InstagramIcon />
-          </a>
-          <a className="w-8 h-8 rounded-full bg-[#079fd1] flex justify-center items-center" href="/">
-            <TikTokIcon />
-          </a>
+                  <a
+                    className="w-8 h-8 rounded-full bg-[#079fd1] flex justify-center items-center"
+                    href="/"
+                  >
+                    <FacebookIcon />
+                  </a>
+                  <a
+                    className="w-8 h-8 rounded-full bg-[#079fd1] flex justify-center items-center"
+                    href="/"
+                  >
+                    <InstagramIcon width={18} height={20} />
+                  </a>
+                  <a
+                    className="w-8 h-8 rounded-full bg-[#079fd1] flex justify-center items-center"
+                    href="/"
+                  >
+                    <TikTokIcon width={17} height={18} />
+                  </a>
                 </div>
               </nav>
             )}

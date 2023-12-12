@@ -1,92 +1,75 @@
-import React, { useState } from 'react'
-import styled from '../ui/animation.module.css'
-import comImg from "../../public/comImg.png";
-import Image from 'next/image';
-const comments = [
-    {
-      id: 1,
-      name: "Oleg",
-      text:
-        " very good high speed internet. Router and modem as a gift. Great" +
-        " " +
-        " price and high speed!!! Thank you Widewave for super service and " +
-        " " +
-        " professionalism",
-        photo: comImg
-    },
-    {
-      id: 2,
-      name: "Ivan",
-      text:
-        "I had internet. but he often disappeared, was slow. friends" +
-        " " +
-        "recommended wide wave. they were very pleased. I tried and I was not" +
-        " " +
-        " wrong. everything works at the highest level. I also recommend it to" +
-        " " +
-        "everyone.",
-        photo: comImg
-    },
-    {
-        id: 3,
-        name: "Oleg",
-        text:
-          " very good high speed internet. Router and modem as a gift. Great" +
-          " " +
-          " price and high speed!!! Thank you Widewave for super service and " +
-          " " +
-          " professionalism",
-          photo: comImg
-      },
-      {
-        id: 4,
-        name: "Ivan",
-        text:
-          "I had internet. but he often disappeared, was slow. friends" +
-          " " +
-          "recommended wide wave. they were very pleased. I tried and I was not" +
-          " " +
-          " wrong. everything works at the highest level. I also recommend it to" +
-          " " +
-          "everyone.",
-          photo: comImg
-      },
-  ];
+import React, { useState } from "react";
+import Image from "next/image";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; //
+import { Carousel } from "react-responsive-carousel";
+import "pure-react-carousel/dist/react-carousel.es.css";
+
+import { comments } from "../lib/comments";
 
 function Reviews() {
-    const [people, setPeople] = useState(comments)
-    const [currentIndex, setCurrentIndex] = useState(0)
+  const [people, setPeople] = useState(comments);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   return (
     <>
-      <section className={styled.section}>
-     <div>
-        <h2 className={styled.title}>reviews</h2>
-     </div>
-     <div className={styled.sectionCenter}>
-      {people.map((person, personIndex) => {
-       let position = styled.nextSlide
-       if(position === currentIndex){
-        position = styled.activeSlide
-       }
-       if(personIndex === currentIndex - 1 || currentIndex === 0 && personIndex === people.length - 1){
-         position = styled.lastsSlide
-       }
-       return(
-        <article key={person.id} className={`${position}`}>
-            <Image src={person.photo} alt='person' width={100} height={100}/>
-            <h4 className={styled.articleH4}>{person.name}</h4>
-            <p className={styled.text}>{person.text}</p>
-        </article>
-       )
-      })}
-      
-     </div>
-    </section>
-    <button type='button' className='prev' onClick={() => setCurrentIndex(currentIndex - 1)}>prev</button>
-      <button type='button' className={`${styled.next}`} onClick={() => setCurrentIndex(currentIndex + 1)}>next</button>
+      <section >
+        <Carousel
+          set
+          showThumbs={false}
+          infiniteLoop={true}
+          autoPlay={true}
+          showIndicators={false}
+          showStatus={false}
+          showArrows={false}
+        >
+          {comments.map((el, i) => {
+            return (
+              <div
+                key={el.id}
+                className="opacity-100 max-w-[500px] m mx-auto py-10  flex items-center border-2 boreder-[#079fd1] rounded-xl my-5 pr-10"
+              >
+                <div>
+                  <h2 className="text-[24px] font-bold mb-2 text-center">
+                    {el.name}
+                  </h2>
+                  <div className="w-[180px] flex justify-center items-center">
+                    <Image src={el.photo} alt="icon" width={120} height={160} />
+                  </div>
+                </div>
+
+                <p className="text-left">{el.text}</p>
+              </div>
+            );
+          })}
+        </Carousel>
+        {/* <div className=" max-w-[500px] px-10 mx-auto  bg-red-500">
+          <Carousel showThumbs={false} infiniteLoop={true} autoPlay={true} 
+          showIndicators={false} showStatus={false} showArrows={false}
+          >
+            {comments.map((el, i) => {
+              return (
+                <div
+                  key={el.id}
+                  className="opacity-100 max-w-[500px] mx-auto py-10  flex items-center border-2 boreder-[#079fd1] rounded-xl my-5 pr-10"
+                >
+                  <div>
+                    <h2 className="text-[24px] font-bold mb-2 text-center">
+                      {el.name}
+                    </h2>
+                    <div className="w-[180px] flex justify-center items-center">
+                      <Image src={comImg} alt="icon" width={120} height={160} />
+                    </div>
+                  </div>
+
+                  <p className="">{el.text}</p>
+                </div>
+              );
+            })}
+          </Carousel>
+        </div> */}
+      </section>
     </>
-  
-  )
+  );
 }
 
-export default Reviews
+export default Reviews;

@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import logo from "../../public/logoNoBg.png";
 import chevronUpIcon from "../../public/svg/chevronUp.svg?url";
-import styles from "../components/navigate.module.css";
+
 
 function Navigate() {
   const [scroll, setScroll] = React.useState(0);
@@ -23,9 +23,7 @@ function Navigate() {
   return (
     <>
       <div
-        className={`${
-          styles.trans
-        } hidden z-40 md:flex font-bold w-[740px] lg:w-[960px] xl:w-[1140px]  justify-between p-4 pl-0 fixed ${
+        className={`trans hidden z-40 md:flex font-bold w-[830px] lg:w-[1060px] xl:w-[1200px]  justify-between p-4 pl-0 fixed ${
           scroll > 200
             ? "top-0 bg-black/[0.6] text-white"
             : "top-[100px] bg-white text-black"
@@ -36,7 +34,7 @@ function Navigate() {
             <Image src={logo} alt="logo" width={105} height={75} />
           </Link>
         </div>
-        <nav className="flex gap-x-2  items-center text-[13px] lg:text-[16px] xl:gap-x-4">
+        <nav className="flex gap-x-1  items-center text-[13px] lg:text-[16px] xl:gap-x-4">
           <Link
             href="/"
             className="hover:text-[#079fd1] transition-colors duration-300"
@@ -61,7 +59,7 @@ function Navigate() {
             href="/web"
             className="hover:text-[#079fd1] transition-colors duration-300"
           >
-            Спостереження
+           Камери відеоспостереження
           </Link>
           <Link
             href="/action"
