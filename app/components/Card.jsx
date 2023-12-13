@@ -5,9 +5,9 @@ import checkIcon from "../../public/svg/checkIcon.svg?url";
 
 function Card({srcImg}) {
   return (
-    <section className="max-w-[1140px] mb-40 pt-5 flex flex-wrap gap-5 mx-auto ">
-        
-      <div className="w-[353px] mx-auto  shadow-[0_0_30px_0_rgba(0,0,0,0.08)] rounded-2xl my-10 border-t-4 border-[#fe974e]">
+    <section >
+        <div className="max-w-[1140px] my-[50px] xl:my-[90]px pt-5 flex flex-wrap gap-5 mx-auto " >
+           <div className="w-[353px] mx-auto  shadow-[0_0_30px_0_rgba(0,0,0,0.08)] rounded-2xl my-10 border-t-4 border-[#fe974e]">
         <div className="relative border-b border-black  py-[60px]">
           <Image
             src={srcImg}
@@ -127,6 +127,8 @@ function Card({srcImg}) {
           </div>
         </div>
       </div>
+        </div>
+     
     </section>
   );
 }

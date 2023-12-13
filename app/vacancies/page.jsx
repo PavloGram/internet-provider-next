@@ -1,17 +1,17 @@
-import React from 'react'
-import Hero from '../components/Hero'
+import React from "react";
+import Hero from "../components/Hero";
 
+const pageName = "Наші вакансії";
 export const metadata = {
-  title: 'Vacancies'
-}
+  title: pageName,
+};
 
 function Vacancies() {
-  const pageName = "Наші вакансії";
   return (
-   <main>
-    <Hero page={pageName}/>
-   </main>
-  )
+    <main>
+      <Hero page={pageName} />
+    </main>
+  );
 }
 
-export default Vacancies
+export default Vacancies;

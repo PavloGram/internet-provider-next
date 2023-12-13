@@ -12,7 +12,7 @@ function Reviews() {
 
   return (
     <>
-      <section className="relative" >
+      <section className="relative">
         <div className=" absolute top-0 left-0 w-full h-full z-40"></div>
         <Carousel
           set
@@ -28,18 +28,18 @@ function Reviews() {
             return (
               <div
                 key={el.id}
-                className="opacity-100 max-w-[500px] m mx-auto py-10  flex items-center border-2 boreder-[#079fd1] rounded-xl my-5 pr-10"
+                className="opacity-100 max-w-[500px] py-5 mx-auto  flex items-center border-2 boreder-[#079fd1] rounded-xl my-5 pr-10"
               >
                 <div>
                   <h2 className="text-[24px] font-bold mb-2 text-center">
                     {el.name}
                   </h2>
                   <div className="w-[180px] flex justify-center items-center">
-                    <Image src={el.photo} alt="icon" width={120} height={160} />
+                    <Image src={el.photo} alt="icon" width={100} height={140} />
                   </div>
                 </div>
 
-                <p className="text-left">{el.text}</p>
+                <p className="text-left text-[14px]">{el.text}</p>
               </div>
             );
           })}

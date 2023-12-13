@@ -29,8 +29,7 @@ function Footer() {
                   href="/"
                   className="w-10 h-10 flex justify-center items-center rounded bg-[#157696] hover:bg-[#079fd1] transition-colors duration-300"
                 >
-                  <FacebookIcon width={16} height={17}/>
-            
+                  <FacebookIcon width={16} height={17} />
                 </a>
               </li>
               <li>
@@ -101,7 +100,8 @@ function Footer() {
               </li>
             </ul>
           </address>
-          <div className=" w-[500px] md:w-[330px] lg:w-[220px] xl:w-[255px]">
+
+          <nav className=" w-[500px] md:w-[330px] lg:w-[220px] xl:w-[255px]">
             <h2 className="text-[25px] my-7 font-bold">Навігація</h2>
             <ul className="flex flex-col gap-y-2">
               <li>
@@ -132,13 +132,12 @@ function Footer() {
                 <Link href="/vacancies">Вакансії</Link>
               </li>
             </ul>
-          </div>
+          </nav>
         </div>
       </footer>
       <div className="  bg-[#079fd1] w-full   ">
         <div className="max-w-[960px] xl:max-w-[1140px] flex justify-center  mx-auto border-t border-white text-white py-7 px-6 text-center">
           <p>© WideWave всі права захищені.</p>
-         
         </div>
       </div>
     </>

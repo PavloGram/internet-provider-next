@@ -1,22 +1,21 @@
 import React from "react";
 import Hero from "../components/Hero";
-import Card from "../ui/card";
-import Contact from "../ui/contact";
-import Modal from "../ui/modal";
+import Card from "../components/Card";
+import Contact from "../components/Contact";
+import Modal from "../components/Modal";
 import tvIcon from "../../public/tvIcon.png";
+import ProductTitle from "../components/ProductTitle";
 
+const pageName = "Фільми та телебачення";
+export const metadata = {
+  title: pageName,
+};
 function FilmAndTv() {
-  const pageName = "Фільми та телебачення";
   return (
     <main>
-      <Hero page={pageName}/>
-      <section>
-        <h1 className="text-[#157696] text-21px md:text-[25px] lg:text-[30px] xl:text-[38px] text-center py-7">
-          Тарифи на послугу
-        </h1>
-      </section>
-
-      <Card srcImg={tvIcon}/>
+      <Hero page={pageName} />
+      <ProductTitle />
+      <Card srcImg={tvIcon} />
       <Contact />
       <Modal />
     </main>
