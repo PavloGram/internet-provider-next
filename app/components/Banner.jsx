@@ -5,7 +5,8 @@ import { heroData } from "../lib/data-hero";
 
 function Banner() {
   return (
-    <section>
+    <section className="relative">
+      <div className=" absolute top-0 left-0 w-full h-full z-40"></div>
       <Carousel
         set
         showThumbs={false}

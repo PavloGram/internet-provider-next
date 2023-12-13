@@ -12,7 +12,8 @@ function Reviews() {
 
   return (
     <>
-      <section >
+      <section className="relative" >
+        <div className=" absolute top-0 left-0 w-full h-full z-40"></div>
         <Carousel
           set
           showThumbs={false}
@@ -21,6 +22,7 @@ function Reviews() {
           showIndicators={false}
           showStatus={false}
           showArrows={false}
+          emulateTouch={false}
         >
           {comments.map((el, i) => {
             return (
