@@ -6,9 +6,10 @@ import Hero from "../components/Hero";
 import styles from '../pay/pay.module.css'
 
 function Pay() {
+  const pageName = 'Оплата'
   return (
-    <>
-      <Hero />
+    <main>
+      <Hero page={pageName}/>
       <section>
         <div className="max-w-1140px flex justify-center items-center p-[90px]">
           <div className="relative h-[300px] min-w-[350px] w-[450px]  flex justify-center items-center shadow-[0_0_12px_0_rgba(0,0,0,0.2)] rounded-xl overflow-hidden">
@@ -25,7 +26,7 @@ function Pay() {
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 }
 

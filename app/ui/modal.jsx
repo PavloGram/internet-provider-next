@@ -10,7 +10,7 @@ function Modal() {
 
    
   return (
-   <>
+   <section>
    {modal.isOpen && (
         <div
           className="fixed top-0 left-0 w-full h-full bg-black/[0.5] flex justify-center pointer-events-auto  items-center overflow-y-auto"
@@ -38,7 +38,7 @@ function Modal() {
           </div>
         </div>
       )}
-   </>
+   </section>
   )
 }
 

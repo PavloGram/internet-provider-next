@@ -5,22 +5,11 @@ import Image from "next/image";
 import conatctsThumb from "../../public/tabThumb.png";
 
 function Contacts() {
-  // function handleSubmit(e){
-  //   e.preventDefault()
-  //   const data = {
-  //     name: name,
-  //     // phone, 
-  //     email,
-  //     message
-  //   }
-  //   console.log(data);
-  // }
+  const pageName = 'Контакти'
   return (
     <main>
-      <section>
-        <Hero />
-      </section>
-      <section className="max-w-[1140px] mx-auto my-10 md:flex gap-10 text-[17px]">
+        <Hero page={pageName}/>
+        <section className="max-w-[1140px] mx-auto my-10 md:flex gap-10 text-[17px]">
         <div className="px-9 py-[60px] max-w-[600px] md:max-w-[50%] mx-auto" >
           <h1 className="text-[#157696] font-bold text-[22px] mb-10 md:text-[28px] lg:text-[38px]">
             Зворотній зв&#39;язок

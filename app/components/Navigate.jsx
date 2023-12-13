@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import logo from "../../public/logoNoBg.png";
 import chevronUpIcon from "../../public/svg/chevronUp.svg?url";
 
 
@@ -23,18 +22,17 @@ function Navigate() {
   return (
     <>
       <div
-        className={`trans hidden z-40 md:flex font-bold w-[830px] lg:w-[1060px] xl:w-[1200px]  justify-between p-4 pl-0 fixed ${
+        className={`trans hidden z-40 md:flex font-bold w-[830px] lg:w-[1060px] xl:w-[1200px]   p-4 pl-0 fixed ${
           scroll > 200
             ? "top-0 bg-black/[0.6] text-white"
             : "top-[100px] bg-white text-black"
-        } right-[50%] translate-x-[50%] rounded items-center`}
+        } right-[50%] translate-x-[50%] rounded items-center gap-`}
       >
         <div>
-          <Link href="/">
-            <Image src={logo} alt="logo" width={105} height={75} />
-          </Link>
+          <Link href="/" className="inline-block w-[105px] h-[75px] bg-logo-bg bg-cover ">
+           </Link>
         </div>
-        <nav className="flex gap-x-1  items-center text-[13px] lg:text-[16px] xl:gap-x-4">
+        <nav className="flex gap-x-1  items-center text-[13px] lg:text-[16px] xl:gap-x-4 ml-auto">
           <Link
             href="/"
             className="hover:text-[#079fd1] transition-colors duration-300"

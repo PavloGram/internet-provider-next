@@ -4,17 +4,15 @@ import logo from '../../public/logoNoBgZip.png'
 import Image from "next/image";
 
 function AboutAs() {
+  const pageName = 'Про нас'
   return (
     <main>
-      <section>
-        <Hero/>
-      </section>
+  
+        <Hero page={pageName}/>
+      
       <section className="max-w-[1140px] mx-auto my-20 px-3 flex flex-wrap gap-5 justify-center">
         <Image src={logo} alt="logo" width={420} height={300}/>
-        {/* <div className="min-w-[320px] min-h-[400px] max-w-[100%] md:max-w-[50%] bg-slate-400 flex justify-center items-center text-[40px]">
-          LOGO
-        </div> */}
-        <div className=" min-w-[320px] max-w-[100%] md:max-w-[50%]">
+         <div className=" min-w-[320px] max-w-[100%] md:max-w-[50%]">
         
           <p>
             Wide wave -це інноваційна компанія, що спеціалізується на розробці

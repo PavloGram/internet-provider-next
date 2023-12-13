@@ -4,9 +4,10 @@ import Image from "next/image";
 import promoImg from "../../public/promotional-offer.jpg";
 
 function Action() {
+  const pageName = 'Акції'
   return (
-    <>
-      <Hero />
+    <main>
+      <Hero page={pageName}/>
       <section>
         <div className="max-w-[1140px] my-[90px] mx-auto px-10">
           <div className=" flex gap-16 flex-col items-center md:flex-row shadow-[0_0_12px_0_rgba(0,0,0,0.2)] rounded-xl p-5">
@@ -21,7 +22,7 @@ function Action() {
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 }
 
