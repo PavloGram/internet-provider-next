@@ -1,8 +1,16 @@
 import React from 'react'
+import Hero from '../components/Hero'
+
+export const metadata = {
+  title: 'Vacancies'
+}
 
 function Vacancies() {
+  const pageName = "Наші вакансії";
   return (
-    <div className='w-full h-[500px] flex justify-center items-center'><p>Vacancies</p></div>
+   <main>
+    <Hero page={pageName}/>
+   </main>
   )
 }
 

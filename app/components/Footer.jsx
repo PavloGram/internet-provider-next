@@ -136,12 +136,9 @@ function Footer() {
         </div>
       </footer>
       <div className="  bg-[#079fd1] w-full   ">
-        <div className="max-w-[960px] xl:max-w-[1140px] flex justify-center flex-wrap gap-x-10 sm:justify-between mx-auto border-t border-white text-white py-7 px-6 text-center">
-          <p>© MetanNet всі права захищені.</p>
-          <div className="flex gap-x-4">
-            <Link href="/">Тарифи</Link>
-            <Link href="/contacts">Контакти</Link>
-          </div>
+        <div className="max-w-[960px] xl:max-w-[1140px] flex justify-center  mx-auto border-t border-white text-white py-7 px-6 text-center">
+          <p>© WideWave всі права захищені.</p>
+         
         </div>
       </div>
     </>
