@@ -3,7 +3,6 @@ import Image from "next/image";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; //
 import { Carousel } from "react-responsive-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
-
 import { comments } from "../lib/comments";
 
 function Reviews() {

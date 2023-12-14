@@ -11,6 +11,9 @@ export const metadata = {
   title: pageName,
 };
 function Internet() {
+
+
+  
   return (
     <main>
       <Hero page={pageName} />

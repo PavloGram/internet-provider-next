@@ -30,13 +30,13 @@ function Banner() {
                   </h1>
                   <p className="md:text-[22px]">{el.description}</p>
                 </div>
-                <Image
-                  src={el.iconUrl}
-                  alt="logo"
-                  width={420}
-                  height={300}
-                  className="hidden md:block w-[420px] h-[300px]"
-                />
+          
+                  <Image
+                    src={el.iconUrl}
+                    alt="logo"
+                    className="hidden md:block w-[420px] h-[300px]"
+                  />
+            
               </div>
             </div>
           );

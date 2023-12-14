@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import chevronUpIcon from "../../public/svg/chevronUp.svg?url";
-
+import ChevronUpIcon from "../ui/ChevronUpIcon";
 
 function Navigate() {
   const [scroll, setScroll] = React.useState(0);
@@ -26,11 +25,13 @@ function Navigate() {
           scroll > 200
             ? "top-0 bg-black/[0.6] text-white"
             : "top-[100px] bg-white text-black"
-        } right-[50%] translate-x-[50%] rounded items-center gap-`}
+        } right-[50%] translate-x-[50%] rounded items-center pointer-events-auto`}
       >
         <div>
-          <Link href="/" className="inline-block w-[105px] h-[75px] bg-logo-bg bg-cover ">
-           </Link>
+          <Link
+            href="/"
+            className="inline-block w-[105px] h-[75px] bg-logo-bg bg-cover "
+          ></Link>
         </div>
         <nav className="flex gap-x-1  items-center text-[13px] lg:text-[16px] xl:gap-x-4 ml-auto">
           <Link
@@ -57,7 +58,7 @@ function Navigate() {
             href="/web"
             className="hover:text-[#079fd1] transition-colors duration-300"
           >
-           Камери відеоспостереження
+            Камери відеоспостереження
           </Link>
           <Link
             href="/action"
@@ -88,10 +89,10 @@ function Navigate() {
       </div>
       {scroll > 200 && (
         <button
-          className="z-40 fixed bottom-20 right-6 md:bottom-10 md:right-10  bg-[#079fd1] rounded-md"
-          onClick={handleUpButton}
+          className="z-[41] fixed bottom-20 right-6 md:bottom-10 md:right-10  bg-[#079fd1] rounded-md"
+          onClick={() => handleUpButton()}
         >
-          <Image src={chevronUpIcon} alt="icon" width={40} height={40} />
+          <ChevronUpIcon width={40} height={40} />
         </button>
       )}
     </>

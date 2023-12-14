@@ -5,7 +5,10 @@ function AboutCom() {
   return (
     <section>
         <div className="max-w-[1140px] mx-auto my-[50px] xl:my-[90px] px-3 flex flex-wrap gap-5 justify-center">
-          <Image src={logo} alt="logo" width={420} height={300} />
+          
+          <div className='w-[420px] h-[300px]'>
+            <Image src={logo} alt="logo"  />
+            </div>
           <div className=" min-w-[320px] max-w-[100%] md:max-w-[50%]">
             <p>
               Wide wave -це інноваційна компанія, що спеціалізується на розробці

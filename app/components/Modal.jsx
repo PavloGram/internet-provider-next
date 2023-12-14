@@ -13,11 +13,11 @@ function Modal() {
    <section>
    {modal.isOpen && (
         <div
-          className="fixed top-0 left-0 w-full h-full bg-black/[0.5] flex justify-center pointer-events-auto  items-center overflow-y-auto"
+          className="fixed z-[1000] top-0 left-0 w-full h-full bg-black/[0.5] flex justify-center  items-start xl:items-center overflow-y-auto"
           onClick={() => modal.close()}
         >
           <div
-            className="z-100 relative mt-2  py-10 px-9 bg-white pointer-events-auto min-w-[260px]  max-w-[450px] rounded-md overflow-hidden"
+            className=" relative mt-2  py-10 px-9 bg-white pointer-events-auto min-w-[260px]  max-w-[450px] rounded-md overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
             <button
