@@ -5,7 +5,7 @@ import Card from "../components/Card";
 import Modal from "../components/Modal";
 import routerIcon from "../../public/icon2.png";
 
-const pageName = "Інтернет";
+const pageName = "Internet";
 export const metadata = {
   title: pageName,
 };

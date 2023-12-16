@@ -3,7 +3,7 @@ import Hero from "../components/Hero";
 import ActionCom from "../components/ActionCom";
 
 
-const pageName = "Акції";
+const pageName = "Actions";
 
 export const metadata = {
   title: pageName,

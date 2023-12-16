@@ -2,7 +2,7 @@ import React from "react";
 import Hero from "../components/Hero";
 import PayCards from "../components/PayCards";
 
-const pageName = "Оплата";
+const pageName = "Pay";
 export const metadata = {
   title: pageName,
 };

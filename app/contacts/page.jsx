@@ -3,7 +3,7 @@ import Hero from "../components/Hero";
 import ContactForm from "../components/ContactForm";
 
 
-const pageName = "Контакти";
+const pageName = "Contacts";
 
 export const metadata = {
   title: pageName,

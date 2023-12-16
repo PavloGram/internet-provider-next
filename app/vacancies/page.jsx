@@ -1,7 +1,7 @@
 import React from "react";
 import Hero from "../components/Hero";
 
-const pageName = "Наші вакансії";
+const pageName = "Vacancies";
 export const metadata = {
   title: pageName,
 };
