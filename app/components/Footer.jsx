@@ -8,8 +8,14 @@ import MapsIcon from "../ui/MapsIcon";
 import InstagramIcon from "../ui/InstagramIcon";
 import TikTokIcon from "../ui/TikTokIcon";
 import FacebookIcon from "../ui/FacebookIcon";
+import { useLangPack } from "@/store";
 
 function Footer() {
+
+  const langPack = useLangPack();
+  const currentLangPack = langPack.currentLangPack;
+
+
   return (
     <>
       <footer className="bg-[#079fd1] w-full text-white py-16 px-2 text-center md:text-left ">
@@ -17,11 +23,10 @@ function Footer() {
           <div className="w-[500px] md:w-[330px] lg:w-[220px] xl:w-[255px]">
             <Link href="/"></Link>
             <h2 className="text-[30px]  my-6 font-black uppercase ">
-              Widewave
+              {currentLangPack.footer.title}
             </h2>
             <p className="mb-4 max-w-[500px] md:max-w-[330px] lg:max-w-[220px] xl:max-w-[255px]">
-              Ми надаємо послуги по підключенню та доступу до швидкісної
-              оптиковолоконної мережі Інтернет.
+            {currentLangPack.footer.desc}
             </p>
             <ul className="flex justify-center gap-x-2 md:justify-start">
               <li>
@@ -51,52 +56,56 @@ function Footer() {
             </ul>
           </div>
           <div className=" w-[500px] md:w-[330px] lg:w-[220px] xl:w-[255px]">
-            <h2 className="my-7 text-[25px] font-bold">Корисні посилання</h2>
+            <h2 className="my-7 text-[25px] font-bold"> {currentLangPack.footer.goodLink}</h2>
             <ul className=" flex flex-col gap-y-[10px]">
               <li>
                 <a href="http://metannet.speedtestcustom.com/">
-                  Перевірка швидкості
+                {currentLangPack.footer.speedDetect}
                 </a>
               </li>
               <li>
-                <a href="/pay">Оплата</a>
+                <a href="/pay">{currentLangPack.menu.pay}</a>
               </li>
 
               <li>
-                <a href="/">Якість інтернету</a>
+                <a href="/">{currentLangPack.footer.internetQuality}</a>
               </li>
 
               <li>
-                <a href="/">Публічний договір (оферта)</a>
+                <a href="/">{currentLangPack.footer.publicContract}</a>
               </li>
               <li>
-                <a href="/">Налаштування роутера</a>
+                <a href="/">{currentLangPack.footer.routSetting}</a>
               </li>
             </ul>
           </div>
           <address className="not-italic  w-[500px] md:w-[330px] lg:w-[220px] xl:w-[255px]">
-            <h2 className="text-[25px] my-7 font-bold">Зв’язок з нами</h2>
+            <h2 className="text-[25px] my-7 font-bold">{currentLangPack.footer.contactForMe}</h2>
             <ul className="flex flex-col gap-y-3">
               <li className="flex flex-col items-center gap-x-3 md:flex-row">
                 <MapsIcon width={20} height={20} />
-                <p>Місцезнаходження</p>
+                <p>{currentLangPack.footer.place}</p>
               </li>
               <li className="flex flex-col items-center gap-x-3 md:flex-row   ">
                 <PhoneSvg width={18} height={20} />
 
                 <div className="flex flex-col">
-                  <a href="tel:+16892125127">+1(689) 212 51 27</a>
-                  <a href="tel:+13054627507">+1(305) 462 75 07</a>
+                  {currentLangPack.footer.officeTel?.map((el) => {
+                    return (<Link key={el.id} href={`tel:${el.telLink}`}>
+                    {el.telText}
+                  </Link>)
+                  })}
+                  
                 </div>
               </li>
               <li className="flex flex-col items-center gap-x-3 md:flex-row">
                 <MailSvg width={18} height={20} />
 
-                <a href="mailto:Widewaveit@gmail.com">Widewaveit@gmail.com</a>
+                <a href={`mailto:${currentLangPack.footer.officeEmail}`}>{currentLangPack.footer.officeEmail}</a>
               </li>
               <li className="flex flex-col items-center gap-x-3 md:flex-row">
                 <ClockIcon width={20} height={20} />
-                <p>Години роботи з 9:00 до 19:00</p>
+                <p>{currentLangPack.footer.timeForWork}</p>
               </li>
             </ul>
           </address>
@@ -105,31 +114,31 @@ function Footer() {
             <h2 className="text-[25px] my-7 font-bold">Навігація</h2>
             <ul className="flex flex-col gap-y-2">
               <li>
-                <Link href="/">Головна</Link>
+                <Link href="/">{currentLangPack.menu.home}</Link>
               </li>
               <li>
-                <Link href="/internet">Інтернет</Link>
+                <Link href="/internet">{currentLangPack.menu.internet}</Link>
               </li>
               <li>
-                <Link href="/film&tv">Фільми та телебачення</Link>
+                <Link href="/film&tv">{currentLangPack.menu.filmAndTv}</Link>
               </li>
               <li>
-                <Link href="/web">Камери відеоспостереження</Link>
+                <Link href="/web">{currentLangPack.menu.camera}</Link>
               </li>
               <li>
-                <Link href="/action">Акції</Link>
+                <Link href="/action">{currentLangPack.menu.actions}</Link>
               </li>
               <li>
-                <Link href="/contacts">Контакти</Link>
+                <Link href="/contacts">{currentLangPack.menu.contacts}</Link>
               </li>
               <li>
-                <Link href="/about">Про нас</Link>
+                <Link href="/about">{currentLangPack.menu.about}</Link>
               </li>
               <li>
-                <Link href="/pay">Оплата</Link>
+                <Link href="/pay">{currentLangPack.menu.pay}</Link>
               </li>
               <li>
-                <Link href="/vacancies">Вакансії</Link>
+                <Link href="/vacancies">{currentLangPack.menu.vacancies}</Link>
               </li>
             </ul>
           </nav>
@@ -137,7 +146,7 @@ function Footer() {
       </footer>
       <div className="  bg-[#079fd1] w-full   ">
         <div className="max-w-[960px] xl:max-w-[1140px] flex justify-center  mx-auto border-t border-white text-white py-7 px-6 text-center">
-          <p>© WideWave всі права захищені.</p>
+          <p>{currentLangPack.rights}</p>
         </div>
       </div>
     </>

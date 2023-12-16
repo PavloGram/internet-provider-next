@@ -1,7 +1,27 @@
-import React from 'react'
+'use client'
+import React, { useEffect } from 'react'
 import logo from "../../public/logoNoBgZip.png";
 import Image from "next/image";
+import { useLang, useLangPack } from '@/store';
+
 function AboutCom() {
+  const lang = useLang();
+  const currentLang = lang.currentLang;
+  const langPack = useLangPack();
+  const currentLangPack = langPack.currentLangPack;
+
+  
+  useEffect(() => {
+    if (currentLang === "en") {
+      return langPack.changeLangToEn();
+    }
+    if (currentLang === "ua") {
+      return langPack.changeLangToUa();
+    }
+    if (currentLang === "ru") {
+      return langPack.changeLangToRu();
+    }
+  }, [currentLangPack, currentLang]);
   return (
     <section>
         <div className="max-w-[1140px] mx-auto my-[50px] xl:my-[90px] px-3 flex flex-wrap gap-5 justify-center">
@@ -11,18 +31,7 @@ function AboutCom() {
             </div>
           <div className=" min-w-[320px] max-w-[100%] md:max-w-[50%]">
             <p>
-              Wide wave -це інноваційна компанія, що спеціалізується на розробці
-              та просуванні IT -технологій та соціальних медіа. Ми зосереджені
-              на творенні унікальних та ефективних рішень для наших клієнтів,
-              допомагаючи їм побудувати сильну присутність в он-лайн середовищі.
-              Також компанія займається безпекою Вашого інтернет-простоту та
-              Вашого життя. З нами Ви досягнуте нових висот та матимете
-              можливість успішно здійснювати свою діяльність через якісний та
-              супер швидкісний інтернет. А можливість переглядати фільми та мати
-              доступ до безліч телеканалів, покращить якість Вашого життя і
-              допоможе провести чудово і корисно час. З нами Ваше життя стане
-              якіснішим і наповниться новими враженнями та досягненнями! Wide
-              Wave - це якість, швидкість та безпека!
+              {currentLangPack.about}
             </p>
           </div>
         </div>

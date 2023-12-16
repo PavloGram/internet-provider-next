@@ -2,9 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import ChevronUpIcon from "../ui/ChevronUpIcon";
+import { useLangPack } from "@/store";
 
 function Navigate() {
   const [scroll, setScroll] = React.useState(0);
+
+  const langPack = useLangPack();
+  const currentLangPack = langPack.currentLangPack;
 
   const handleScroll = () => {
     setScroll(window.scrollY);
@@ -38,52 +42,52 @@ function Navigate() {
             href="/"
             className="hover:text-[#079fd1] transition-colors duration-300"
           >
-            Головна
+            {currentLangPack.menu.home}
           </Link>
 
           <Link
             href="/internet"
             className="hover:text-[#079fd1] transition-colors duration-300"
           >
-            Інтернет
+            {currentLangPack.menu.internet}
           </Link>
           <Link
             href="/film&tv"
             className="hover:text-[#079fd1] transition-colors duration-300"
           >
-            Фільми та телебачення
+            {currentLangPack.menu.filmAndTv}
           </Link>
 
           <Link
             href="/web"
             className="hover:text-[#079fd1] transition-colors duration-300"
           >
-            Камери відеоспостереження
+            {currentLangPack.menu.camera}
           </Link>
           <Link
             href="/action"
             className="hover:text-[#079fd1] transition-colors duration-300"
           >
-            Акції
+            {currentLangPack.menu.actions}
           </Link>
           <Link
             href="/contacts"
             className="hover:text-[#079fd1] transition-colors duration-300"
           >
-            Контакти
+            {currentLangPack.menu.contacts}
           </Link>
           <Link
             href="/about"
             className="hover:text-[#079fd1] transition-colors duration-300"
           >
-            Про нас
+            {currentLangPack.menu.about}
           </Link>
           <Link
             href="/pay"
             //  className="px-6 py-3 bg-[#079fd7] rounded"
             className="hover:text-[#079fd1] transition-colors duration-300"
           >
-            Оплата
+            {currentLangPack.menu.pay}
           </Link>
         </nav>
       </div>

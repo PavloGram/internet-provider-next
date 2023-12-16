@@ -9,6 +9,9 @@ export const metadata = {
   title: pageName,
 };
 function Action() {
+
+  
+
   return (
     <main>
       <Hero page={pageName} />
