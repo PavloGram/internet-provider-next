@@ -6,9 +6,9 @@ import MailSvg from "../ui/MailIcon";
 import PhoneSvg from "../ui/PhoneIcon";
 import MapsIcon from "../ui/MapsIcon";
 import InstagramIcon from "../ui/InstagramIcon";
-import TikTokIcon from "../ui/TikTokIcon";
 import FacebookIcon from "../ui/FacebookIcon";
 import { useLangPack } from "@/store";
+import TwitterIcon from "../ui/TwitterIcon";
 
 function Footer() {
 
@@ -30,28 +30,28 @@ function Footer() {
             </p>
             <ul className="flex justify-center gap-x-2 md:justify-start">
               <li>
-                <a
-                  href="/"
+                <Link
+                  href="https://www.facebook.com/profile.php?id=61554412811098"
                   className="w-10 h-10 flex justify-center items-center rounded bg-[#157696] hover:bg-[#079fd1] transition-colors duration-300"
                 >
                   <FacebookIcon width={16} height={17} />
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/"
+                <Link
+                  href="https://www.instagram.com/widewave_?igshid=YzAwZjE1ZTI0Zg=="
                   className="w-10 h-10 flex justify-center items-center rounded bg-[#157696] hover:bg-[#079fd1] transition-colors duration-300"
                 >
                   <InstagramIcon width={16} height={17} />
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/"
+                <Link
+                  href="https://x.com/WideWave_?t=WI8pSshtGw_3c6m6BFd8rg&s=09"
                   className="w-10 h-10 flex justify-center items-center rounded bg-[#157696] hover:bg-[#079fd1] transition-colors duration-300"
                 >
-                  <TikTokIcon width={16} height={17} />
-                </a>
+                  <TwitterIcon width={16} height={17} />
+                </Link>
               </li>
             </ul>
           </div>
@@ -59,23 +59,23 @@ function Footer() {
             <h2 className="my-7 text-[25px] font-bold"> {currentLangPack.footer.goodLink}</h2>
             <ul className=" flex flex-col gap-y-[10px]">
               <li>
-                <a href="http://metannet.speedtestcustom.com/">
+                <Link href="http://metannet.speedtestcustom.com/">
                 {currentLangPack.footer.speedDetect}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/pay">{currentLangPack.menu.pay}</a>
-              </li>
-
-              <li>
-                <a href="/">{currentLangPack.footer.internetQuality}</a>
+                <Link href="/pay">{currentLangPack.menu.pay}</Link>
               </li>
 
               <li>
-                <a href="/">{currentLangPack.footer.publicContract}</a>
+                <Link href="/">{currentLangPack.footer.internetQuality}</Link>
+              </li>
+
+              <li>
+                <Link href="/">{currentLangPack.footer.publicContract}</Link>
               </li>
               <li>
-                <a href="/">{currentLangPack.footer.routSetting}</a>
+                <Link href="/">{currentLangPack.footer.routSetting}</Link>
               </li>
             </ul>
           </div>
@@ -89,14 +89,15 @@ function Footer() {
               <li className="flex flex-col items-center gap-x-3 md:flex-row   ">
                 <PhoneSvg width={18} height={20} />
 
-                <div className="flex flex-col">
+                <ul className="flex flex-col">
                   {currentLangPack.footer.officeTel?.map((el) => {
-                    return (<Link key={el.id} href={`tel:${el.telLink}`}>
+                    return (<li key={el.id}>
+                      <Link  href={`tel:${el.telLink}`}>
                     {el.telText}
-                  </Link>)
-                  })}
-                  
-                </div>
+                  </Link>
+                    </li> )
+                  })}                  
+                </ul>
               </li>
               <li className="flex flex-col items-center gap-x-3 md:flex-row">
                 <MailSvg width={18} height={20} />
@@ -111,7 +112,7 @@ function Footer() {
           </address>
 
           <nav className=" w-[500px] md:w-[330px] lg:w-[220px] xl:w-[255px]">
-            <h2 className="text-[25px] my-7 font-bold">Навігація</h2>
+            <h2 className="text-[25px] my-7 font-bold">{currentLangPack.footer.nav}</h2>
             <ul className="flex flex-col gap-y-2">
               <li>
                 <Link href="/">{currentLangPack.menu.home}</Link>

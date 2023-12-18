@@ -25,21 +25,20 @@ function Reviews() {
           showStatus={false}
           showArrows={false}
           emulateTouch={false}
+          interval={5000}
         >
           {comments.map((el, i) => {
             return (
               <div
                 key={el.id}
-                className="opacity-100  py-5 flex items-center border-2 boreder-[#079fd1] rounded-xl my-5 pr-10"
+                className="opacity-100  p-5  border-2 boreder-[#079fd1] rounded-xl my-5 pr-10"
               >
-                <div>
+               
                   <h2 className="text-[24px] font-bold mb-2 text-center">
                     {el.name}
                   </h2>
-                  <div className="w-[180px] flex justify-center items-center">
-                    <Image src={el.photo} alt="icon" width={100} height={140} />
-                  </div>
-                </div>
+               
+               
 
                 <p className="text-left text-[14px]">{el.text}</p>
               </div>

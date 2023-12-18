@@ -3,9 +3,8 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import conatctsThumb from "../../public/tabThumb.png";
 import FormLoader from "../ui/FormLoader";
-import SuccessMsg from "../ui/SuccessMsg";
-import ErrorMsg from "../ui/ErrorMsg";
 import { useLang, useLangPack } from "@/store";
+import ReqMsg from "../ui/ReqMsg";
 
 function ContactForm() {
   const lang = useLang();
@@ -17,8 +16,8 @@ function ContactForm() {
   const [tel, setTel] = useState("");
   const [message, setMessage] = useState("");
   const [isActLoader, setIsActLoader] = useState(false);
-  const [successMsg, setSuccessMsg] = useState(false);
-  const [errorMsg, setErrorMsg] = useState(false);
+  const [isActMsg, setIsActMsg] = useState(false);
+  const [reqMsg, setReqMsg] = useState("success");
 
   useEffect(() => {
     if (currentLang === "en") {
@@ -32,23 +31,8 @@ function ContactForm() {
     }
   }, [currentLangPack, currentLang]);
 
-  // useEffect(() => {
-  //   if (path === "/internet") {
-  //     return setCurrentPage(currentLangPack.menu.internet);
-  //   }
-  //   if (path === "/film&tv") {
-  //     return setCurrentPage(currentLangPack.menu.filmAndTv);
-  //   }
-  //   if (path === "/web") {
-  //     return setCurrentPage(currentLangPack.menu.camera);
-  //   }
-  // }, [currentLangPack, currentLang]);
-
-  function succesMsgToogle() {
-    setSuccessMsg(false);
-  }
-  function errorMsgToogle() {
-    setSuccessMsg(false);
+  function toggleStateMsg() {
+    setIsActMsg(false);
   }
 
   const handleSubmit = (e) => {
@@ -59,27 +43,30 @@ function ContactForm() {
       email,
       message,
     };
-    console.log(data);
+    // console.log(data);
     setIsActLoader(true);
+
     setName("");
     setTel("");
     setEmail("");
     setMessage("");
 
-    fetch("/api/servise", {
+    fetch("/api/servhise", {
       method: "post",
       body: JSON.stringify(data),
     })
       .then(() => {
         setIsActLoader(false);
-        setSuccessMsg(true);
-        setTimeout(succesMsgToogle, 2000);
+        setReqMsg("success");
+        setIsActMsg(true);
+        setTimeout(toggleStateMsg, 2500);
       })
       .catch(() => {
         {
           setIsActLoader(false);
-          setErrorMsg(true);
-          setTimeout(errorMsgToogle, 2000);
+          setReqMsg("error");
+          setIsActMsg(true);
+          setTimeout(toggleStateMsg, 2500);
         }
       })
       .finally(() => setIsActLoader(false));
@@ -134,6 +121,7 @@ function ContactForm() {
             />
             <button
               type="submit"
+              // onClick={() => setIsActMsg(!isActMsg)}
               className="text-[17px] px-[30px] py-[15px] bg-[#079fd1] rounded text-white font-bold leading-normal hover:bg-black transition-colors duration-300"
             >
               {currentLangPack.formText.send}
@@ -145,8 +133,7 @@ function ContactForm() {
         </div>
       </div>
       {isActLoader && <FormLoader />}
-      <SuccessMsg isActive={successMsg} />
-      <ErrorMsg isActive={errorMsg} />
+      <ReqMsg value={reqMsg} isActive={isActMsg} />
     </section>
   );
 }

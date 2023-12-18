@@ -3,8 +3,8 @@ import React, { useEffect, useState } from "react";
 import closeIcon from "../../public/svg/closeIcon.svg?url";
 import Image from "next/image";
 import { useLang, useLangPack, useModal } from "@/store";
-import SuccessMsg from "../ui/SuccessMsg";
-import ErrorMsg from "../ui/ErrorMsg";
+// import SuccessMsg from "../ui/SuccessMsg";
+// import ErrorMsg from "../ui/ErrorMsg";
 import FormLoader from "../ui/FormLoader";
 import { usaState } from "../lib/state";
 import { usePathname } from "next/navigation";
@@ -171,8 +171,8 @@ function Modal() {
         </div>
 
         {isActLoader && <FormLoader />}
-        {successMsg && <SuccessMsg />}
-        {errorMsg && <ErrorMsg />}
+        {/* {successMsg && <SuccessMsg />}
+        {errorMsg && <ErrorMsg />} */}
       </div>
     </section>
   );

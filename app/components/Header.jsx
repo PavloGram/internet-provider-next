@@ -14,61 +14,64 @@ import TikTokIcon from "../ui/TikTokIcon";
 import FacebookIcon from "../ui/FacebookIcon";
 import LangToggle from "../ui/LangToggle";
 import { useLangPack } from "@/store";
+import TwitterIcon from "../ui/TwitterIcon";
 
 function Header() {
   const [actMobMeny, setActMobMenu] = useState(false);
   const langPack = useLangPack();
   const currentLangPack = langPack.currentLangPack;
-  
+
   return (
     <header className="mx-auto">
       <div className="bg-[#079fd1] hidden md:block">
-        <div className="max-w-[1140px] mx-auto hidden sm:flex z-40  text-white  text-xs  p-3 flex-wrap  justify-center lg:justify-between md:text-base ">
-        <div className="flex gap-x-[20px]">
-          <a
-            href="tel:+16892125127"
-            className="headerLink flex items-center gap-1  transition hover:text-black"
-          >
-            <PhoneSvg width={12} height={12} />
-            +1(689) 212 51 27
-          </a>
-          <a
-            href="tel:+13054627507"
-            className="headerLink flex items-center gap-1 transition hover:text-black"
-          >
-            <PhoneSvg width={12} height={12} />
-            +1(305) 462 75 07
-          </a>
+        <div className="max-w-[1140px] mx-auto hidden sm:flex z-40  text-white  text-xs  p-3 flex-wrap gap-y-2  justify-center lg:justify-between md:text-base ">
+          <ul className="flex gap-x-[20px] items-center">
+            {currentLangPack.footer.officeTel?.map((el) => {
+              return (
+                <li key={el.id}>
+                  <Link
+                    className="headerLink flex items-center gap-1  transition hover:text-black"
+                    href={`tel:${el.telLink}`}
+                  >
+                    <PhoneSvg width={12} height={12} />
+                    {el.telText}
+                  </Link>
+                </li>
+              );
+            })}
 
-          <a
-            href="mailto:Widewaveit@gmail.com"
-            className="headerLink flex items-center gap-1 transition hover:text-black"
-          >
-            <MailSvg width={14} height={14} />
-            Widewaveit@gmail.com
-          </a>
-        </div>
-        <div className="flex items-center gap-4">
-          <a
-            href="http://metannet.speedtestcustom.com/"
-            className="hover:text-black transition-colors duration-300"
-          >
-            Перевірка швидкості
-          </a>
-          <a href="/" className="headerLink">
-            <FacebookIcon width={15} height={16} />
-          </a>
-          <a href="/" className="headerLink">
-            <InstagramIcon width={15} height={16} />
-          </a>
-          <a href="/" className="headerLink">
-            <TikTokIcon width={15} height={16} />
-          </a>
-          <LangToggle/>
+            <li>
+              <Link
+                href={`mailto:${currentLangPack.footer.officeEmail}`}
+                className="headerLink flex items-center gap-1 transition hover:text-black"
+              >
+                <MailSvg width={14} height={14} />
+                {currentLangPack.footer.officeEmail}
+              </Link>
+            </li>
+          </ul>
+
+          <div className="flex items-center gap-4">
+            <Link
+              href="http://metannet.speedtestcustom.com/"
+              className="hover:text-black transition-colors duration-300"
+            >
+              {currentLangPack.footer.internetQuality}
+            </Link>
+            <Link href="https://www.facebook.com/profile.php?id=61554412811098" className="headerLink">
+              <FacebookIcon width={15} height={16} />
+            </Link>
+            <Link href="https://www.instagram.com/widewave_?igshid=YzAwZjE1ZTI0Zg==" className="headerLink">
+              <InstagramIcon width={15} height={16} />
+            </Link>
+            <Link href="https://x.com/WideWave_?t=WI8pSshtGw_3c6m6BFd8rg&s=09" className="headerLink">
+              <TwitterIcon width={15} height={16} />
+            </Link>
+            <LangToggle />
+          </div>
         </div>
       </div>
-      </div>
-      
+
       <div className="md:hidden">
         <Link href="/">
           <div className="mx-auto my-5 w-[210px] h-[150px]">
@@ -78,7 +81,7 @@ function Header() {
 
         <div className="relative p-[10px] bg-[#079fd1] flex justify-between items-center ">
           <span className="uppercase font-bold text-white">menu</span>{" "}
-          <LangToggle/>
+          <LangToggle />
           <button type="button" onClick={() => setActMobMenu(!actMobMeny)}>
             <Image
               src={actMobMeny ? closeIcon : menuIcon}
@@ -97,57 +100,57 @@ function Header() {
                 {currentLangPack.menu.home}
               </Link>
               <Link href="/internet" onClick={() => setActMobMenu(!actMobMeny)}>
-              {currentLangPack.menu.internet}
+                {currentLangPack.menu.internet}
               </Link>
               <Link href="/film&tv" onClick={() => setActMobMenu(!actMobMeny)}>
-              {currentLangPack.menu.filmAndTv}
+                {currentLangPack.menu.filmAndTv}
               </Link>
 
               <Link href="/web" onClick={() => setActMobMenu(!actMobMeny)}>
-              {currentLangPack.menu.camera}
+                {currentLangPack.menu.camera}
               </Link>
               <Link href="/action" onClick={() => setActMobMenu(!actMobMeny)}>
-              {currentLangPack.menu.actions}
+                {currentLangPack.menu.actions}
               </Link>
               <Link href="/contacts" onClick={() => setActMobMenu(!actMobMeny)}>
-              {currentLangPack.menu.contacts}
+                {currentLangPack.menu.contacts}
               </Link>
               <Link href="/about" onClick={() => setActMobMenu(!actMobMeny)}>
-              {currentLangPack.menu.about}
+                {currentLangPack.menu.about}
               </Link>
               <Link
                 href="/pay"
-                //  className="px-6 py-3 bg-[#079fd7] rounded"
+                
                 onClick={() => setActMobMenu(!actMobMeny)}
               >
                 {currentLangPack.menu.pay}
               </Link>
               <Link
                 href="/vacancies"
-                //  className="px-6 py-3 bg-[#079fd7] rounded"
+               
                 onClick={() => setActMobMenu(!actMobMeny)}
               >
                 {currentLangPack.menu.vacancies}
               </Link>
               <div className="flex gap-x-3 mt-5">
-                <a
+                <Link
                   className="w-8 h-8 rounded-full bg-[#079fd1] flex justify-center items-center"
-                  href="/"
+                  href="https://www.facebook.com/profile.php?id=61554412811098"
                 >
                   <FacebookIcon />
-                </a>
-                <a
+                </Link>
+                <Link
                   className="w-8 h-8 rounded-full bg-[#079fd1] flex justify-center items-center"
-                  href="/"
+                  href="https://www.instagram.com/widewave_?igshid=YzAwZjE1ZTI0Zg=="
                 >
                   <InstagramIcon width={18} height={20} />
-                </a>
-                <a
+                </Link>
+                <Link
                   className="w-8 h-8 rounded-full bg-[#079fd1] flex justify-center items-center"
-                  href="/"
+                  href="https://x.com/WideWave_?t=WI8pSshtGw_3c6m6BFd8rg&s=09"
                 >
-                  <TikTokIcon width={17} height={18} />
-                </a>
+                  <TwitterIcon width={17} height={18} />
+                </Link>
               </div>
             </nav>
           </div>

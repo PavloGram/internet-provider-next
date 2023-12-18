@@ -41,12 +41,12 @@ export const uaPackage = {
     {
       id: 1,
       telLink: "+16892125127",
-      telText: "+1(689) 212 51 27",
+      telText: "(ukr, rus) +1(689) 212 51 27",
     },
     {
       id: 2,
       telLink: "+13054627507",
-      telText: "+1(305) 462 75 07",
+      telText: "(rus, eng) +1(305) 462 75 07",
     },
   ],
   footer: {
@@ -59,16 +59,17 @@ export const uaPackage = {
     routSetting: "Налаштування роутера",
     contactForMe: "Зв’язок з нами",
     place:'',
+    nav: 'Навігація',
     officeTel: [
       {
         id: 1,
         telLink: "+16892125127",
-        telText: "+1(689) 212 51 27",
+        telText: "(ukr, rus) +1(689) 212 51 27",
       },
       {
         id: 2,
         telLink: "+13054627507",
-        telText: "+1(305) 462 75 07",
+        telText: "(rus, eng) +1(305) 462 75 07",
       },
     ],
     officeEmail: 'Widewaveit@gmail.com',
@@ -91,12 +92,12 @@ export const uaPackage = {
         {
           id: 1,
           telLink: "+16892125127",
-          telText: "+1(689) 212 51 27",
+          telText: "(ukr, rus) +1(689) 212 51 27",
         },
         {
           id: 2,
           telLink: "+13054627507",
-          telText: "+1(305) 462 75 07",
+          telText: "(rus, eng) +1(305) 462 75 07",
         },
       ],
     },
@@ -113,12 +114,12 @@ export const uaPackage = {
         {
           id: 1,
           telLink: "+16892125127",
-          telText: "+1(689) 212 51 27",
+          telText: "(ukr, rus) +1(689) 212 51 27",
         },
         {
           id: 2,
           telLink: "+13054627507",
-          telText: "+1(305) 462 75 07",
+          telText: "(rus, eng) +1(305) 462 75 07",
         },
       ],
     },
@@ -135,12 +136,12 @@ export const uaPackage = {
         {
           id: 1,
           telLink: "+16892125127",
-          telText: "+1(689) 212 51 27",
+          telText: "(ukr, rus) +1(689) 212 51 27",
         },
         {
           id: 2,
           telLink: "+13054627507",
-          telText: "+1(305) 462 75 07",
+          telText: "(rus, eng) +1(305) 462 75 07",
         },
       ],
     },
@@ -157,12 +158,12 @@ export const uaPackage = {
         {
           id: 1,
           telLink: "+16892125127",
-          telText: "+1(689) 212 51 27",
+          telText: "(ukr, rus) +1(689) 212 51 27",
         },
         {
           id: 2,
           telLink: "+13054627507",
-          telText: "+1(305) 462 75 07",
+          telText: "(rus, eng) +1(305) 462 75 07",
         },
       ],
     },
@@ -181,12 +182,12 @@ export const uaPackage = {
         {
           id: 1,
           telLink: "+16892125127",
-          telText: "+1(689) 212 51 27",
+          telText: "(ukr, rus) +1(689) 212 51 27",
         },
         {
           id: 2,
           telLink: "+13054627507",
-          telText: "+1(305) 462 75 07",
+          telText: "(rus, eng) +1(305) 462 75 07",
         },
       ],
     },
@@ -205,12 +206,12 @@ export const uaPackage = {
         {
           id: 1,
           telLink: "+16892125127",
-          telText: "+1(689) 212 51 27",
+          telText: "(ukr, rus) +1(689) 212 51 27",
         },
         {
           id: 2,
           telLink: "+13054627507",
-          telText: "+1(305) 462 75 07",
+          telText: "(rus, eng) +1(305) 462 75 07",
         },
       ],
     },
@@ -271,12 +272,12 @@ export const ruPackage = {
     {
       id: 1,
       telLink: "+16892125127",
-      telText: "+1(689) 212 51 27",
+      telText: "(ukr, rus) +1(689) 212 51 27",
     },
     {
       id: 2,
       telLink: "+13054627507",
-      telText: "+1(305) 462 75 07",
+      telText: "(rus, eng) +1(305) 462 75 07",
     },
   ],
   footer: {
@@ -289,16 +290,17 @@ export const ruPackage = {
     routSetting: "Настройка роутера",
     contactForMe: "Связь с нами",
     place:'',
+    nav: 'Навигация',
     officeTel: [
       {
         id: 1,
         telLink: "+16892125127",
-        telText: "+1(689) 212 51 27",
+        telText: "(ukr, rus) +1(689) 212 51 27",
       },
       {
         id: 2,
         telLink: "+13054627507",
-        telText: "+1(305) 462 75 07",
+        telText: "(rus, eng) +1(305) 462 75 07",
       },
     ],
     officeEmail: 'Widewaveit@gmail.com',
@@ -321,12 +323,12 @@ export const ruPackage = {
         {
           id: 1,
           telLink: "+16892125127",
-          telText: "+1(689) 212 51 27",
+          telText: "(ukr, rus) +1(689) 212 51 27",
         },
         {
           id: 2,
           telLink: "+13054627507",
-          telText: "+1(305) 462 75 07",
+          telText: "(rus, eng) +1(305) 462 75 07",
         },
       ],
     },
@@ -343,12 +345,12 @@ export const ruPackage = {
         {
           id: 1,
           telLink: "+16892125127",
-          telText: "+1(689) 212 51 27",
+          telText: "(ukr, rus) +1(689) 212 51 27",
         },
         {
           id: 2,
           telLink: "+13054627507",
-          telText: "+1(305) 462 75 07",
+          telText: "(rus, eng) +1(305) 462 75 07",
         },
       ],
     },
@@ -365,12 +367,12 @@ export const ruPackage = {
         {
           id: 1,
           telLink: "+16892125127",
-          telText: "+1(689) 212 51 27",
+          telText: "(ukr, rus) +1(689) 212 51 27",
         },
         {
           id: 2,
           telLink: "+13054627507",
-          telText: "+1(305) 462 75 07",
+          telText: "(rus, eng) +1(305) 462 75 07",
         },
       ],
     },
@@ -387,12 +389,12 @@ export const ruPackage = {
         {
           id: 1,
           telLink: "+16892125127",
-          telText: "+1(689) 212 51 27",
+          telText: "(ukr, rus) +1(689) 212 51 27",
         },
         {
           id: 2,
           telLink: "+13054627507",
-          telText: "+1(305) 462 75 07",
+          telText: "(rus, eng) +1(305) 462 75 07",
         },
       ],
     },
@@ -411,12 +413,12 @@ export const ruPackage = {
         {
           id: 1,
           telLink: "+16892125127",
-          telText: "+1(689) 212 51 27",
+          telText: "(ukr, rus) +1(689) 212 51 27",
         },
         {
           id: 2,
           telLink: "+13054627507",
-          telText: "+1(305) 462 75 07",
+          telText: "(rus, eng) +1(305) 462 75 07",
         },
       ],
     },
@@ -435,12 +437,12 @@ export const ruPackage = {
         {
           id: 1,
           telLink: "+16892125127",
-          telText: "+1(689) 212 51 27",
+          telText: "(ukr, rus) +1(689) 212 51 27",
         },
         {
           id: 2,
           telLink: "+13054627507",
-          telText: "+1(305) 462 75 07",
+          telText: "(rus, eng) +1(305) 462 75 07",
         },
       ],
     },
@@ -511,12 +513,12 @@ export const enPackage = {
     {
       id: 1,
       telLink: "+16892125127",
-      telText: "+1(689) 212 51 27",
+      telText: "(ukr, rus) +1(689) 212 51 27",
     },
     {
       id: 2,
       telLink: "+13054627507",
-      telText: "+1(305) 462 75 07",
+      telText: "(rus, eng) +1(305) 462 75 07",
     },
   ],
   footer: {
@@ -529,16 +531,17 @@ export const enPackage = {
     routSetting: "Router settings",
     contactForMe: "Contact us",
     place:'',
+    nav: 'Navigation',
     officeTel: [
       {
         id: 1,
         telLink: "+16892125127",
-        telText: "+1(689) 212 51 27",
+        telText: "(ukr, rus) +1(689) 212 51 27",
       },
       {
         id: 2,
         telLink: "+13054627507",
-        telText: "+1(305) 462 75 07",
+        telText: "(rus, eng) +1(305) 462 75 07",
       },
     ],
     officeEmail: 'Widewaveit@gmail.com',
@@ -561,12 +564,12 @@ export const enPackage = {
         {
           id: 1,
           telLink: "+16892125127",
-          telText: "+1(689) 212 51 27",
+          telText: "(ukr, rus) +1(689) 212 51 27",
         },
         {
           id: 2,
           telLink: "+13054627507",
-          telText: "+1(305) 462 75 07",
+          telText: "(rus, eng) +1(305) 462 75 07",
         },
       ],
     },
@@ -583,12 +586,12 @@ export const enPackage = {
         {
           id: 1,
           telLink: "+16892125127",
-          telText: "+1(689) 212 51 27",
+          telText: "(ukr, rus) +1(689) 212 51 27",
         },
         {
           id: 2,
           telLink: "+13054627507",
-          telText: "+1(305) 462 75 07",
+          telText: "(rus, eng) +1(305) 462 75 07",
         },
       ],
     },
@@ -605,12 +608,12 @@ export const enPackage = {
         {
           id: 1,
           telLink: "+16892125127",
-          telText: "+1(689) 212 51 27",
+          telText: "(ukr, rus) +1(689) 212 51 27",
         },
         {
           id: 2,
           telLink: "+13054627507",
-          telText: "+1(305) 462 75 07",
+          telText: "(rus, eng) +1(305) 462 75 07",
         },
       ],
     },
@@ -627,12 +630,12 @@ export const enPackage = {
         {
           id: 1,
           telLink: "+16892125127",
-          telText: "+1(689) 212 51 27",
+          telText: "(ukr, rus) +1(689) 212 51 27",
         },
         {
           id: 2,
           telLink: "+13054627507",
-          telText: "+1(305) 462 75 07",
+          telText: "(rus, eng) +1(305) 462 75 07",
         },
       ],
     },
@@ -651,12 +654,12 @@ export const enPackage = {
         {
           id: 1,
           telLink: "+16892125127",
-          telText: "+1(689) 212 51 27",
+          telText: "(ukr, rus) +1(689) 212 51 27",
         },
         {
           id: 2,
           telLink: "+13054627507",
-          telText: "+1(305) 462 75 07",
+          telText: "(rus, eng) +1(305) 462 75 07",
         },
       ],
     },
@@ -675,12 +678,12 @@ export const enPackage = {
         {
           id: 1,
           telLink: "+16892125127",
-          telText: "+1(689) 212 51 27",
+          telText: "(ukr, rus) +1(689) 212 51 27",
         },
         {
           id: 2,
           telLink: "+13054627507",
-          telText: "+1(305) 462 75 07",
+          telText: "(rus, eng) +1(305) 462 75 07",
         },
       ],
     },
