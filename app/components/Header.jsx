@@ -24,7 +24,7 @@ function Header() {
   return (
     <header className="mx-auto">
       <div className="bg-[#079fd1] hidden md:block">
-        <div className="max-w-[1140px] mx-auto hidden sm:flex z-40  text-white  text-xs  p-3 flex-wrap gap-y-2  justify-center lg:justify-between md:text-base ">
+        <div className="max-w-[1140px] mx-auto hidden sm:flex z-40  text-white  text-xs  p-3 flex-wrap gap-2  justify-center xl:justify-between md:text-base ">
           <ul className="flex gap-x-[20px] items-center">
             {currentLangPack.footer.officeTel?.map((el) => {
               return (
