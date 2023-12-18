@@ -35,7 +35,7 @@ function ContactForm() {
     setIsActMsg(false);
   }
 
-  const handleSubmit = (e) => {
+  function handleSubmit (e) {
     e.preventDefault();
     const data = {
       name,
@@ -51,7 +51,7 @@ function ContactForm() {
     setEmail("");
     setMessage("");
 
-    fetch("/api/servhise", {
+    fetch("/api/contactForm", {
       method: "post",
       body: JSON.stringify(data),
     })
@@ -69,7 +69,7 @@ function ContactForm() {
           setTimeout(toggleStateMsg, 2500);
         }
       })
-      .finally(() => setIsActLoader(false));
+    
   };
 
   return (

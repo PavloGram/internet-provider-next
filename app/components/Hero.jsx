@@ -22,7 +22,7 @@ function Hero() {
     if (currentLang === "ru") {
       return langPack.changeLangToRu();
     }
-  }, [currentLangPack, currentLang]);
+  }, [ currentLang, ]);
 
   useEffect(() => {
     if (path === "/internet") {
@@ -47,7 +47,7 @@ function Hero() {
       return setCurrentPage(currentLangPack.menu.vacancies);
     } 
    
-  }, [currentLangPack, currentLang]);
+  }, [currentLangPack, currentLang, path]);
 
   return (
     <section className="hero  w-full h-[276px] lg:h-[460px] bg-cover bg-top flex justify-center items-center text-white font-bold text-[20px]">

@@ -3,46 +3,41 @@ import React, { useEffect, useState } from "react";
 import closeIcon from "../../public/svg/closeIcon.svg?url";
 import Image from "next/image";
 import { useLang, useLangPack, useModal } from "@/store";
-// import SuccessMsg from "../ui/SuccessMsg";
-// import ErrorMsg from "../ui/ErrorMsg";
 import FormLoader from "../ui/FormLoader";
 import { usaState } from "../lib/state";
 import { usePathname } from "next/navigation";
+import ReqMsg from "../ui/ReqMsg";
 
 function Modal() {
   const [name, setName] = useState("");
-  const [stateLang, setStateLang] = useState("");
   const [stateList, setStateList] = useState(usaState);
-  const [state, setState] = useState("");
+  const [state, setState] = useState('');
   const [tariff, setTariff] = useState([]);
+  const [selectTariff, setSelectTariff] = useState([]);
   const [tel, setTel] = useState("");
-  const [message, setMessage] = useState("");
+  const [address, setAddress] = useState("");
   const [isActLoader, setIsActLoader] = useState(false);
-  const [successMsg, setSuccessMsg] = useState(false);
-  const [errorMsg, setErrorMsg] = useState(false);
   const lang = useLang();
   const currentLang = lang.currentLang;
   const langPack = useLangPack();
   const currentLangPack = langPack.currentLangPack;
-
+  const [reqMsg, setReqMsg] = useState("success");
+  const [isActMsg, setIsActMsg] = useState(false);
+  const modal = useModal();
   const path = usePathname();
+
 
   useEffect(() => {
     if (currentLang === "en") {
-      setStateLang("el.engName");
       return langPack.changeLangToEn();
     }
     if (currentLang === "ua") {
-      setStateLang("uaName");
       return langPack.changeLangToUa();
     }
     if (currentLang === "ru") {
-      setStateLang("ruName");
       return langPack.changeLangToRu();
     }
-  }, [currentLangPack, currentLang]);
-
-  const modal = useModal();
+  }, [currentLang]);
 
   useEffect(() => {
     if (currentLang === "en") {
@@ -52,28 +47,7 @@ function Modal() {
     } else {
       setStateList(usaState.sort((a, b) => a.uaName.localeCompare(b.uaName)));
     }
-  }, []);
-
-  function succesMsgToogle() {
-    setSuccessMsg(false);
-  }
-  function errorMsgToogle() {
-    setSuccessMsg(false);
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const data = {
-      name,
-      tel,
-      message,
-    };
-    console.log(data);
-    setIsActLoader(true);
-    setName("");
-    setTel("");
-    setMessage("");
-  };
+  }, [currentLang]);
 
   useEffect(() => {
     if (path === "/internet") {
@@ -85,7 +59,52 @@ function Modal() {
     if (path === "/web") {
       return setTariff(currentLangPack.securetyPack);
     }
-  }, [currentLangPack, currentLang]);
+  }, [currentLangPack, currentLang, path]);
+
+  function toggleStateMsg() {
+    setIsActMsg(false);
+  }
+
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const data = {
+      name,
+      state,
+      selectTariff,
+      tel,
+      address
+    };
+   
+    setIsActLoader(true);
+
+    setName("");
+    setState(currentLangPack.formText.state);
+    setSelectTariff(currentLangPack.formText.terrif)
+    setTel("");
+    setAddress("")
+   
+   
+
+    fetch("/api/modalForm", {
+      method: "post",
+      body: JSON.stringify(data),
+    })
+      .then(() => {
+        setIsActLoader(false);
+        setReqMsg("success");
+        setIsActMsg(true);
+        setTimeout(toggleStateMsg, 2500);
+      })
+      .catch(() => {
+        {
+          setIsActLoader(false);
+          setReqMsg("error");
+          setIsActMsg(true);
+          setTimeout(toggleStateMsg, 2500);
+        }
+      });
+  }
 
   return (
     <section>
@@ -118,11 +137,14 @@ function Modal() {
               className="leading-6 py-[10px] pr-4 pl-[30px] outline-none border border-[#ced4da] rounded focus:border-blue-500"
               placeholder={currentLangPack.formText.name}
               onChange={(e) => setName(e.target.value)}
+              required
             ></input>
             <select
               name="location"
               className=" py-[10px] pr-4 pl-[30px] outline-none border border-[#ced4da] rounded focus:border-blue-500"
-            >
+              onChange={(e) => setState(e.target.value)}
+              
+           >
               <option>{currentLangPack.formText.state}</option>
               {stateList.map((el) => {
                 return (
@@ -135,6 +157,7 @@ function Modal() {
 
             <select
               name="price"
+              onChange={(e) => setSelectTariff(e.target.value)}
               className="py-[10px] pr-4 pl-[30px] outline-none border border-[#ced4da] rounded focus:border-blue-500"
             >
               <option>{currentLangPack.formText.terrif}</option>
@@ -152,14 +175,16 @@ function Modal() {
               className="py-[10px] pr-4 pl-[30px] outline-none border border-[#ced4da] rounded focus:border-blue-500"
               placeholder={currentLangPack.formText.telNumber}
               onChange={(e) => setTel(e.target.value)}
+              required
             ></input>
             <textarea
-              value={message}
+              value={address}
               cols={40}
               rows={6}
               className="py-[10px] pr-4 pl-[30px] outline-none border border-[#ced4da] rounded focus:border-blue-500"
               placeholder={currentLangPack.formText.address}
-              onChange={(e) => setMessage(e.target.value)}
+              onChange={(e) => setAddress(e.target.value)}
+              required
             ></textarea>
             <button
               type="submit"
@@ -171,8 +196,7 @@ function Modal() {
         </div>
 
         {isActLoader && <FormLoader />}
-        {/* {successMsg && <SuccessMsg />}
-        {errorMsg && <ErrorMsg />} */}
+        <ReqMsg value={reqMsg} isActive={isActMsg} />
       </div>
     </section>
   );

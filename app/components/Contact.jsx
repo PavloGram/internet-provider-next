@@ -24,7 +24,7 @@ function Contact() {
     <section className="pt-[75px] pb-[65px] bg-contact-bg ">
       <div className=" max-w-[1140px]  p-[10px] mx-auto flex flex-col items-center lg:flex-row lg:justify-between">
         <p className="text-[23px] text-white text-center mb-[30px] lg:mb-0 font-bold md:text-[40px] lg:text-left">
-          {currentLangPack.calback}
+          {currentLangPack.callback}
         </p>{" "}
         <div className="h-[70px]">
           <button

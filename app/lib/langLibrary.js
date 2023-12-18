@@ -449,7 +449,7 @@ export const ruPackage = {
   ],
 
   actions: [{ id: 1, desc: "" }],
-  calback: "Оставить заявку на подключение",
+  callback: "Оставить заявку на подключение",
   callbackBtn: "Оставить заявку",
   formTitle: "Обратная связь",
   formText: {
@@ -689,7 +689,7 @@ export const enPackage = {
     },
   ],
   actions: [{ id: 1,  desc: "Attention! As a special gift, anyone who connects an internet modem and router will receive exclusive access to movies and channels. Those who connect before the New Year will enjoy this bonus gift! Seize this fantastic opportunity now and treat yourself and your loved ones to this special offer!", }],
-  calback: "Submit a connection request",
+  callback: "Submit a connection request",
   callbackBtn: "Leave a request",
   formTitle: "Feedback",
   formText: {
