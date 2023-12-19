@@ -45,6 +45,8 @@ function Hero() {
     }  
     if (path === "/vacancies") {
       return setCurrentPage(currentLangPack.menu.vacancies);
+    }   if (path === "/pay") {
+      return setCurrentPage(currentLangPack.menu.pay);
     } 
    
   }, [currentLangPack, currentLang, path]);
